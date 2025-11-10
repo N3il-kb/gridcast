@@ -4,7 +4,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { EffectComposer, wrapEffect } from '@react-three/postprocessing';
 import { Effect } from 'postprocessing';
 import * as THREE from 'three';
-
+import clsx from 'clsx';
 import './Dither.css';
 
 const waveVertexShader = `
@@ -241,16 +241,20 @@ function DitheredWaves({
         <shaderMaterial
           vertexShader={waveVertexShader}
           fragmentShader={waveFragmentShader}
-          uniforms={waveUniformsRef.current} />
+          uniforms={waveUniformsRef.current}
+        />
       </mesh>
+
       <EffectComposer>
         <RetroEffect colorNum={colorNum} pixelSize={pixelSize} />
       </EffectComposer>
+
       <mesh
         onPointerMove={handlePointerMove}
         position={[0, 0, 0.01]}
         scale={[viewport.width, viewport.height, 1]}
-        visible={false}>
+        visible={false}
+      >
         <planeGeometry args={[1, 1]} />
         <meshBasicMaterial transparent opacity={0} />
       </mesh>
@@ -267,14 +271,22 @@ export default function Dither({
   pixelSize = 2,
   disableAnimation = false,
   enableMouseInteraction = true,
-  mouseRadius = 1
+  mouseRadius = 1,
+  className = '',
 }) {
+  const containerClass = clsx(
+    'dither-container',
+    enableMouseInteraction ? 'dither-container--interactive' : 'dither-container--static',
+    className,
+  );
+
   return (
     <Canvas
-      className="dither-container"
+      className={containerClass}
       camera={{ position: [0, 0, 6] }}
       dpr={1}
-      gl={{ antialias: true, preserveDrawingBuffer: true }}>
+      gl={{ antialias: true, preserveDrawingBuffer: true }}
+    >
       <DitheredWaves
         waveSpeed={waveSpeed}
         waveFrequency={waveFrequency}
@@ -284,7 +296,8 @@ export default function Dither({
         pixelSize={pixelSize}
         disableAnimation={disableAnimation}
         enableMouseInteraction={enableMouseInteraction}
-        mouseRadius={mouseRadius} />
+        mouseRadius={mouseRadius}
+      />
     </Canvas>
   );
 }

@@ -45,31 +45,26 @@ export default function App() {
       {/* Features Section */}
       <section className="z-10 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-6xl">
         <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-md text-center hover:bg-white/10 transition">
-          <h3 className="text-xl font-semibold text-green-300 mb-2">Real-Time Insights</h3>
+          <h3 className="text-xl font-semibold text-white-300 mb-2">Real-Time Insights</h3>
           <p className="text-white/70">
             Live data visualizations of regional and national energy grids to stay ahead of market shifts.
           </p>
         </div>
         <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-md text-center hover:bg-white/10 transition">
-          <h3 className="text-xl font-semibold text-green-300 mb-2">AI Forecasting</h3>
+          <h3 className="text-xl font-semibold text-white-300 mb-2">AI Forecasting</h3>
           <p className="text-white/70">
             Powered by advanced ARIMA + neural hybrid models for accurate energy demand predictions.
           </p>
         </div>
         <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-md text-center hover:bg-white/10 transition">
-          <h3 className="text-xl font-semibold text-green-300 mb-2">Sustainability Index</h3>
+          <h3 className="text-xl font-semibold text-white-300 mb-2">Sustainability Index</h3>
           <p className="text-white/70">
             Balance profitability and sustainability with our datacenter and ESG scoring models.
           </p>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="z-10 mt-20 mb-6 text-center text-sm text-white/60">
-        <p>
-          Built with ❤️ by <span className="text-green-300">GridCast Labs</span>
-        </p>
-      </footer>
+
     </main>
   );
 }

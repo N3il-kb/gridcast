@@ -71,7 +71,7 @@ export default function App() {
 
         <div className="relative z-10 flex w-full max-w-5xl flex-1 flex-col items-center justify-center text-center">
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white drop-shadow-[0_0_15px_rgba(0,255,128,0.25)] mt-36">
-            GridCast
+            ⚡️GridCast
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/80 sm:text-xl">
             Forecasting the energy of tomorrow, today.

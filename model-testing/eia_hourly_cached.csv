@@ -1,64 +1,175 @@
 period,respondent,respondent-name,type,type-name,value,value-units
+2025-11-13T08,NW,Northwest,DF,Day-ahead demand forecast,2719,megawatthours
+2025-11-13T08,US48,United States Lower 48,DF,Day-ahead demand forecast,2719,megawatthours
+2025-11-13T07,NW,Northwest,DF,Day-ahead demand forecast,2821,megawatthours
+2025-11-13T07,SW,Southwest,DF,Day-ahead demand forecast,2145,megawatthours
+2025-11-13T07,US48,United States Lower 48,DF,Day-ahead demand forecast,4966,megawatthours
+2025-11-13T06,MIDW,Midwest,DF,Day-ahead demand forecast,1909,megawatthours
+2025-11-13T06,NW,Northwest,DF,Day-ahead demand forecast,2968,megawatthours
+2025-11-13T06,SW,Southwest,DF,Day-ahead demand forecast,2293,megawatthours
+2025-11-13T06,TEN,Tennessee,DF,Day-ahead demand forecast,17428,megawatthours
+2025-11-13T06,US48,United States Lower 48,DF,Day-ahead demand forecast,24598,megawatthours
 2025-11-13T05,FLA,Florida,DF,Day-ahead demand forecast,2120,megawatthours
-2025-11-13T05,US48,United States Lower 48,DF,Day-ahead demand forecast,2120,megawatthours
+2025-11-13T05,MIDW,Midwest,DF,Day-ahead demand forecast,5691,megawatthours
+2025-11-13T05,NW,Northwest,DF,Day-ahead demand forecast,3117,megawatthours
+2025-11-13T05,SW,Southwest,DF,Day-ahead demand forecast,2454,megawatthours
+2025-11-13T05,TEN,Tennessee,DF,Day-ahead demand forecast,17840,megawatthours
+2025-11-13T05,US48,United States Lower 48,DF,Day-ahead demand forecast,31222,megawatthours
 2025-11-13T04,FLA,Florida,DF,Day-ahead demand forecast,2246,megawatthours
-2025-11-13T04,US48,United States Lower 48,DF,Day-ahead demand forecast,2246,megawatthours
+2025-11-13T04,MIDW,Midwest,DF,Day-ahead demand forecast,5919,megawatthours
+2025-11-13T04,NW,Northwest,DF,Day-ahead demand forecast,3213,megawatthours
+2025-11-13T04,SW,Southwest,DF,Day-ahead demand forecast,2578,megawatthours
+2025-11-13T04,TEN,Tennessee,DF,Day-ahead demand forecast,18698,megawatthours
+2025-11-13T04,US48,United States Lower 48,DF,Day-ahead demand forecast,32654,megawatthours
 2025-11-13T03,FLA,Florida,DF,Day-ahead demand forecast,2379,megawatthours
-2025-11-13T03,US48,United States Lower 48,DF,Day-ahead demand forecast,2379,megawatthours
+2025-11-13T03,MIDW,Midwest,DF,Day-ahead demand forecast,6177,megawatthours
+2025-11-13T03,NW,Northwest,DF,Day-ahead demand forecast,3268,megawatthours
+2025-11-13T03,SW,Southwest,DF,Day-ahead demand forecast,2669,megawatthours
+2025-11-13T03,TEN,Tennessee,DF,Day-ahead demand forecast,19135,megawatthours
+2025-11-13T03,US48,United States Lower 48,DF,Day-ahead demand forecast,33628,megawatthours
 2025-11-13T02,FLA,Florida,DF,Day-ahead demand forecast,2485,megawatthours
-2025-11-13T02,US48,United States Lower 48,DF,Day-ahead demand forecast,2485,megawatthours
+2025-11-13T02,MIDW,Midwest,DF,Day-ahead demand forecast,6276,megawatthours
+2025-11-13T02,NW,Northwest,DF,Day-ahead demand forecast,3279,megawatthours
+2025-11-13T02,SW,Southwest,DF,Day-ahead demand forecast,2772,megawatthours
+2025-11-13T02,TEN,Tennessee,DF,Day-ahead demand forecast,19312,megawatthours
+2025-11-13T02,US48,United States Lower 48,DF,Day-ahead demand forecast,34124,megawatthours
 2025-11-13T01,FLA,Florida,DF,Day-ahead demand forecast,2546,megawatthours
-2025-11-13T01,US48,United States Lower 48,DF,Day-ahead demand forecast,2546,megawatthours
+2025-11-13T01,MIDW,Midwest,DF,Day-ahead demand forecast,6356,megawatthours
+2025-11-13T01,NW,Northwest,DF,Day-ahead demand forecast,3237,megawatthours
+2025-11-13T01,SW,Southwest,DF,Day-ahead demand forecast,2787,megawatthours
+2025-11-13T01,TEN,Tennessee,DF,Day-ahead demand forecast,19471,megawatthours
+2025-11-13T01,US48,United States Lower 48,DF,Day-ahead demand forecast,34397,megawatthours
 2025-11-13T00,FLA,Florida,DF,Day-ahead demand forecast,2540,megawatthours
-2025-11-13T00,US48,United States Lower 48,DF,Day-ahead demand forecast,2540,megawatthours
+2025-11-13T00,MIDW,Midwest,DF,Day-ahead demand forecast,6237,megawatthours
+2025-11-13T00,NW,Northwest,DF,Day-ahead demand forecast,3168,megawatthours
+2025-11-13T00,SW,Southwest,DF,Day-ahead demand forecast,2705,megawatthours
+2025-11-13T00,TEN,Tennessee,DF,Day-ahead demand forecast,19112,megawatthours
+2025-11-13T00,US48,United States Lower 48,DF,Day-ahead demand forecast,33762,megawatthours
 2025-11-12T23,FLA,Florida,DF,Day-ahead demand forecast,2469,megawatthours
-2025-11-12T23,US48,United States Lower 48,DF,Day-ahead demand forecast,2469,megawatthours
+2025-11-12T23,MIDW,Midwest,DF,Day-ahead demand forecast,5887,megawatthours
+2025-11-12T23,NW,Northwest,DF,Day-ahead demand forecast,3190,megawatthours
+2025-11-12T23,SW,Southwest,DF,Day-ahead demand forecast,2542,megawatthours
+2025-11-12T23,TEN,Tennessee,DF,Day-ahead demand forecast,17994,megawatthours
+2025-11-12T23,US48,United States Lower 48,DF,Day-ahead demand forecast,32082,megawatthours
 2025-11-12T22,FLA,Florida,DF,Day-ahead demand forecast,2328,megawatthours
-2025-11-12T22,US48,United States Lower 48,DF,Day-ahead demand forecast,2328,megawatthours
+2025-11-12T22,MIDW,Midwest,DF,Day-ahead demand forecast,5716,megawatthours
+2025-11-12T22,NW,Northwest,DF,Day-ahead demand forecast,3214,megawatthours
+2025-11-12T22,SW,Southwest,DF,Day-ahead demand forecast,2357,megawatthours
+2025-11-12T22,TEN,Tennessee,DF,Day-ahead demand forecast,17441,megawatthours
+2025-11-12T22,US48,United States Lower 48,DF,Day-ahead demand forecast,31056,megawatthours
 2025-11-12T21,FLA,Florida,DF,Day-ahead demand forecast,2277,megawatthours
-2025-11-12T21,US48,United States Lower 48,DF,Day-ahead demand forecast,2277,megawatthours
+2025-11-12T21,MIDW,Midwest,DF,Day-ahead demand forecast,5731,megawatthours
+2025-11-12T21,NW,Northwest,DF,Day-ahead demand forecast,3259,megawatthours
+2025-11-12T21,SW,Southwest,DF,Day-ahead demand forecast,2188,megawatthours
+2025-11-12T21,TEN,Tennessee,DF,Day-ahead demand forecast,17386,megawatthours
+2025-11-12T21,US48,United States Lower 48,DF,Day-ahead demand forecast,30841,megawatthours
 2025-11-12T20,FLA,Florida,DF,Day-ahead demand forecast,2248,megawatthours
-2025-11-12T20,US48,United States Lower 48,DF,Day-ahead demand forecast,2248,megawatthours
+2025-11-12T20,MIDW,Midwest,DF,Day-ahead demand forecast,5828,megawatthours
+2025-11-12T20,NW,Northwest,DF,Day-ahead demand forecast,3311,megawatthours
+2025-11-12T20,SW,Southwest,DF,Day-ahead demand forecast,2081,megawatthours
+2025-11-12T20,TEN,Tennessee,DF,Day-ahead demand forecast,17505,megawatthours
+2025-11-12T20,US48,United States Lower 48,DF,Day-ahead demand forecast,30973,megawatthours
 2025-11-12T19,FLA,Florida,DF,Day-ahead demand forecast,2261,megawatthours
-2025-11-12T19,US48,United States Lower 48,DF,Day-ahead demand forecast,2261,megawatthours
+2025-11-12T19,MIDW,Midwest,DF,Day-ahead demand forecast,5941,megawatthours
+2025-11-12T19,NW,Northwest,DF,Day-ahead demand forecast,3390,megawatthours
+2025-11-12T19,SW,Southwest,DF,Day-ahead demand forecast,2006,megawatthours
+2025-11-12T19,TEN,Tennessee,DF,Day-ahead demand forecast,17945,megawatthours
+2025-11-12T19,US48,United States Lower 48,DF,Day-ahead demand forecast,31543,megawatthours
 2025-11-12T18,FLA,Florida,DF,Day-ahead demand forecast,2296,megawatthours
-2025-11-12T18,US48,United States Lower 48,DF,Day-ahead demand forecast,2296,megawatthours
+2025-11-12T18,MIDW,Midwest,DF,Day-ahead demand forecast,6143,megawatthours
+2025-11-12T18,NW,Northwest,DF,Day-ahead demand forecast,3419,megawatthours
+2025-11-12T18,SW,Southwest,DF,Day-ahead demand forecast,1976,megawatthours
+2025-11-12T18,TEN,Tennessee,DF,Day-ahead demand forecast,18245,megawatthours
+2025-11-12T18,US48,United States Lower 48,DF,Day-ahead demand forecast,32079,megawatthours
 2025-11-12T17,FLA,Florida,DF,Day-ahead demand forecast,2377,megawatthours
-2025-11-12T17,US48,United States Lower 48,DF,Day-ahead demand forecast,2377,megawatthours
+2025-11-12T17,MIDW,Midwest,DF,Day-ahead demand forecast,6363,megawatthours
+2025-11-12T17,NW,Northwest,DF,Day-ahead demand forecast,3444,megawatthours
+2025-11-12T17,SW,Southwest,DF,Day-ahead demand forecast,2019,megawatthours
+2025-11-12T17,TEN,Tennessee,DF,Day-ahead demand forecast,18800,megawatthours
+2025-11-12T17,US48,United States Lower 48,DF,Day-ahead demand forecast,33003,megawatthours
 2025-11-12T16,FLA,Florida,DF,Day-ahead demand forecast,2501,megawatthours
-2025-11-12T16,US48,United States Lower 48,DF,Day-ahead demand forecast,2501,megawatthours
+2025-11-12T16,MIDW,Midwest,DF,Day-ahead demand forecast,6622,megawatthours
+2025-11-12T16,NW,Northwest,DF,Day-ahead demand forecast,3403,megawatthours
+2025-11-12T16,SW,Southwest,DF,Day-ahead demand forecast,2141,megawatthours
+2025-11-12T16,TEN,Tennessee,DF,Day-ahead demand forecast,19460,megawatthours
+2025-11-12T16,US48,United States Lower 48,DF,Day-ahead demand forecast,34127,megawatthours
 2025-11-12T15,FLA,Florida,DF,Day-ahead demand forecast,2680,megawatthours
-2025-11-12T15,US48,United States Lower 48,DF,Day-ahead demand forecast,2680,megawatthours
+2025-11-12T15,MIDW,Midwest,DF,Day-ahead demand forecast,6892,megawatthours
+2025-11-12T15,NW,Northwest,DF,Day-ahead demand forecast,3251,megawatthours
+2025-11-12T15,SW,Southwest,DF,Day-ahead demand forecast,2272,megawatthours
+2025-11-12T15,TEN,Tennessee,DF,Day-ahead demand forecast,20397,megawatthours
+2025-11-12T15,US48,United States Lower 48,DF,Day-ahead demand forecast,35492,megawatthours
 2025-11-12T14,FLA,Florida,DF,Day-ahead demand forecast,2879,megawatthours
-2025-11-12T14,US48,United States Lower 48,DF,Day-ahead demand forecast,2879,megawatthours
+2025-11-12T14,MIDW,Midwest,DF,Day-ahead demand forecast,7193,megawatthours
+2025-11-12T14,NW,Northwest,DF,Day-ahead demand forecast,3023,megawatthours
+2025-11-12T14,SW,Southwest,DF,Day-ahead demand forecast,2283,megawatthours
+2025-11-12T14,TEN,Tennessee,DF,Day-ahead demand forecast,21392,megawatthours
+2025-11-12T14,US48,United States Lower 48,DF,Day-ahead demand forecast,36770,megawatthours
 2025-11-12T13,FLA,Florida,DF,Day-ahead demand forecast,3038,megawatthours
-2025-11-12T13,US48,United States Lower 48,DF,Day-ahead demand forecast,3038,megawatthours
+2025-11-12T13,MIDW,Midwest,DF,Day-ahead demand forecast,7245,megawatthours
+2025-11-12T13,NW,Northwest,DF,Day-ahead demand forecast,2812,megawatthours
+2025-11-12T13,SW,Southwest,DF,Day-ahead demand forecast,2143,megawatthours
+2025-11-12T13,TEN,Tennessee,DF,Day-ahead demand forecast,21650,megawatthours
+2025-11-12T13,US48,United States Lower 48,DF,Day-ahead demand forecast,36888,megawatthours
 2025-11-12T12,FLA,Florida,DF,Day-ahead demand forecast,2997,megawatthours
-2025-11-12T12,US48,United States Lower 48,DF,Day-ahead demand forecast,2997,megawatthours
+2025-11-12T12,MIDW,Midwest,DF,Day-ahead demand forecast,6813,megawatthours
+2025-11-12T12,NW,Northwest,DF,Day-ahead demand forecast,2698,megawatthours
+2025-11-12T12,SW,Southwest,DF,Day-ahead demand forecast,2045,megawatthours
+2025-11-12T12,TEN,Tennessee,DF,Day-ahead demand forecast,20666,megawatthours
+2025-11-12T12,US48,United States Lower 48,DF,Day-ahead demand forecast,35219,megawatthours
 2025-11-12T11,FLA,Florida,DF,Day-ahead demand forecast,2745,megawatthours
-2025-11-12T11,US48,United States Lower 48,DF,Day-ahead demand forecast,2745,megawatthours
+2025-11-12T11,MIDW,Midwest,DF,Day-ahead demand forecast,6309,megawatthours
+2025-11-12T11,NW,Northwest,DF,Day-ahead demand forecast,2659,megawatthours
+2025-11-12T11,SW,Southwest,DF,Day-ahead demand forecast,2000,megawatthours
+2025-11-12T11,TEN,Tennessee,DF,Day-ahead demand forecast,19224,megawatthours
+2025-11-12T11,US48,United States Lower 48,DF,Day-ahead demand forecast,32937,megawatthours
 2025-11-12T10,FLA,Florida,DF,Day-ahead demand forecast,2474,megawatthours
-2025-11-12T10,US48,United States Lower 48,DF,Day-ahead demand forecast,2474,megawatthours
+2025-11-12T10,MIDW,Midwest,DF,Day-ahead demand forecast,6000,megawatthours
+2025-11-12T10,NW,Northwest,DF,Day-ahead demand forecast,2653,megawatthours
+2025-11-12T10,SW,Southwest,DF,Day-ahead demand forecast,2008,megawatthours
+2025-11-12T10,TEN,Tennessee,DF,Day-ahead demand forecast,18835,megawatthours
+2025-11-12T10,US48,United States Lower 48,DF,Day-ahead demand forecast,31970,megawatthours
+2025-11-12T09,CAL,California,D,Demand,25189,megawatthours
+2025-11-12T09,CAR,Carolinas,D,Demand,26965,megawatthours
+2025-11-12T09,CENT,Central,D,Demand,28402,megawatthours
+2025-11-12T09,FLA,Florida,D,Demand,24430,megawatthours
 2025-11-12T09,FLA,Florida,DF,Day-ahead demand forecast,2345,megawatthours
-2025-11-12T09,US48,United States Lower 48,DF,Day-ahead demand forecast,2345,megawatthours
+2025-11-12T09,MIDA,Mid-Atlantic,D,Demand,87917,megawatthours
+2025-11-12T09,MIDW,Midwest,D,Demand,73688,megawatthours
+2025-11-12T09,MIDW,Midwest,DF,Day-ahead demand forecast,5897,megawatthours
+2025-11-12T09,NE,New England,D,Demand,12030,megawatthours
+2025-11-12T09,NW,Northwest,D,Demand,31209,megawatthours
+2025-11-12T09,NW,Northwest,DF,Day-ahead demand forecast,2691,megawatthours
+2025-11-12T09,NY,New York,D,Demand,14525,megawatthours
+2025-11-12T09,SE,Southeast,D,Demand,28315,megawatthours
+2025-11-12T09,SW,Southwest,D,Demand,10915,megawatthours
+2025-11-12T09,SW,Southwest,DF,Day-ahead demand forecast,2037,megawatthours
+2025-11-12T09,TEN,Tennessee,D,Demand,18449,megawatthours
+2025-11-12T09,TEN,Tennessee,DF,Day-ahead demand forecast,18727,megawatthours
+2025-11-12T09,TEX,Texas,D,Demand,42698,megawatthours
+2025-11-12T09,US48,United States Lower 48,D,Demand,424732,megawatthours
+2025-11-12T09,US48,United States Lower 48,DF,Day-ahead demand forecast,31697,megawatthours
 2025-11-12T08,CAL,California,D,Demand,26715,megawatthours
 2025-11-12T08,CAL,California,DF,Day-ahead demand forecast,27539,megawatthours
 2025-11-12T08,CAR,Carolinas,D,Demand,26836,megawatthours
 2025-11-12T08,CENT,Central,D,Demand,28477,megawatthours
-2025-11-12T08,FLA,Florida,D,Demand,23720,megawatthours
+2025-11-12T08,FLA,Florida,D,Demand,23819,megawatthours
 2025-11-12T08,FLA,Florida,DF,Day-ahead demand forecast,2297,megawatthours
 2025-11-12T08,MIDA,Mid-Atlantic,D,Demand,88319,megawatthours
-2025-11-12T08,MIDW,Midwest,D,Demand,69656,megawatthours
+2025-11-12T08,MIDW,Midwest,D,Demand,73783,megawatthours
+2025-11-12T08,MIDW,Midwest,DF,Day-ahead demand forecast,5895,megawatthours
 2025-11-12T08,NE,New England,D,Demand,12047,megawatthours
-2025-11-12T08,NW,Northwest,D,Demand,32151,megawatthours
+2025-11-12T08,NW,Northwest,D,Demand,35632,megawatthours
 2025-11-12T08,NW,Northwest,DF,Day-ahead demand forecast,21762,megawatthours
 2025-11-12T08,NY,New York,D,Demand,14642,megawatthours
 2025-11-12T08,SE,Southeast,D,Demand,28126,megawatthours
-2025-11-12T08,SW,Southwest,D,Demand,11252,megawatthours
-2025-11-12T08,TEN,Tennessee,D,Demand,18463,megawatthours
+2025-11-12T08,SW,Southwest,D,Demand,11286,megawatthours
+2025-11-12T08,SW,Southwest,DF,Day-ahead demand forecast,2129,megawatthours
+2025-11-12T08,TEN,Tennessee,D,Demand,18537,megawatthours
+2025-11-12T08,TEN,Tennessee,DF,Day-ahead demand forecast,18802,megawatthours
 2025-11-12T08,TEX,Texas,D,Demand,43389,megawatthours
-2025-11-12T08,US48,United States Lower 48,D,Demand,423793,megawatthours
-2025-11-12T08,US48,United States Lower 48,DF,Day-ahead demand forecast,51598,megawatthours
+2025-11-12T08,US48,United States Lower 48,D,Demand,431608,megawatthours
+2025-11-12T08,US48,United States Lower 48,DF,Day-ahead demand forecast,78424,megawatthours
 2025-11-12T07,CAL,California,D,Demand,30559,megawatthours
 2025-11-12T07,CAL,California,DF,Day-ahead demand forecast,29291,megawatthours
 2025-11-12T07,CAR,Carolinas,D,Demand,27031,megawatthours
@@ -67,6 +178,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T07,FLA,Florida,DF,Day-ahead demand forecast,2297,megawatthours
 2025-11-12T07,MIDA,Mid-Atlantic,D,Demand,89436,megawatthours
 2025-11-12T07,MIDW,Midwest,D,Demand,74855,megawatthours
+2025-11-12T07,MIDW,Midwest,DF,Day-ahead demand forecast,5965,megawatthours
 2025-11-12T07,NE,New England,D,Demand,12308,megawatthours
 2025-11-12T07,NW,Northwest,D,Demand,29702,megawatthours
 2025-11-12T07,NW,Northwest,DF,Day-ahead demand forecast,35390,megawatthours
@@ -74,10 +186,11 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T07,SE,Southeast,D,Demand,28111,megawatthours
 2025-11-12T07,SW,Southwest,D,Demand,10702,megawatthours
 2025-11-12T07,SW,Southwest,DF,Day-ahead demand forecast,7477,megawatthours
-2025-11-12T07,TEN,Tennessee,D,Demand,18694,megawatthours
+2025-11-12T07,TEN,Tennessee,D,Demand,18692,megawatthours
+2025-11-12T07,TEN,Tennessee,DF,Day-ahead demand forecast,19003,megawatthours
 2025-11-12T07,TEX,Texas,D,Demand,44329,megawatthours
-2025-11-12T07,US48,United States Lower 48,D,Demand,433112,megawatthours
-2025-11-12T07,US48,United States Lower 48,DF,Day-ahead demand forecast,74455,megawatthours
+2025-11-12T07,US48,United States Lower 48,D,Demand,433110,megawatthours
+2025-11-12T07,US48,United States Lower 48,DF,Day-ahead demand forecast,99423,megawatthours
 2025-11-12T06,CAL,California,D,Demand,31540,megawatthours
 2025-11-12T06,CAL,California,DF,Day-ahead demand forecast,31136,megawatthours
 2025-11-12T06,CAR,Carolinas,D,Demand,27602,megawatthours
@@ -87,7 +200,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T06,FLA,Florida,DF,Day-ahead demand forecast,2332,megawatthours
 2025-11-12T06,MIDA,Mid-Atlantic,D,Demand,90924,megawatthours
 2025-11-12T06,MIDW,Midwest,D,Demand,76103,megawatthours
-2025-11-12T06,MIDW,Midwest,DF,Day-ahead demand forecast,2135,megawatthours
+2025-11-12T06,MIDW,Midwest,DF,Day-ahead demand forecast,6039,megawatthours
 2025-11-12T06,NE,New England,D,Demand,12644,megawatthours
 2025-11-12T06,NW,Northwest,D,Demand,39754,megawatthours
 2025-11-12T06,NW,Northwest,DF,Day-ahead demand forecast,37222,megawatthours
@@ -96,12 +209,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T06,SE,Southeast,DF,Day-ahead demand forecast,27918,megawatthours
 2025-11-12T06,SW,Southwest,D,Demand,12441,megawatthours
 2025-11-12T06,SW,Southwest,DF,Day-ahead demand forecast,7883,megawatthours
-2025-11-12T06,TEN,Tennessee,D,Demand,18972,megawatthours
+2025-11-12T06,TEN,Tennessee,D,Demand,18930,megawatthours
 2025-11-12T06,TEN,Tennessee,DF,Day-ahead demand forecast,19639,megawatthours
 2025-11-12T06,TEX,Texas,D,Demand,45539,megawatthours
 2025-11-12T06,TEX,Texas,DF,Day-ahead demand forecast,45874,megawatthours
-2025-11-12T06,US48,United States Lower 48,D,Demand,452951,megawatthours
-2025-11-12T06,US48,United States Lower 48,DF,Day-ahead demand forecast,207622,megawatthours
+2025-11-12T06,US48,United States Lower 48,D,Demand,452909,megawatthours
+2025-11-12T06,US48,United States Lower 48,DF,Day-ahead demand forecast,211526,megawatthours
 2025-11-12T05,CAL,California,D,Demand,32723,megawatthours
 2025-11-12T05,CAL,California,DF,Day-ahead demand forecast,32334,megawatthours
 2025-11-12T05,CAR,Carolinas,D,Demand,28349,megawatthours
@@ -112,8 +225,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T05,FLA,Florida,DF,Day-ahead demand forecast,23273,megawatthours
 2025-11-12T05,MIDA,Mid-Atlantic,D,Demand,93714,megawatthours
 2025-11-12T05,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,92637,megawatthours
-2025-11-12T05,MIDW,Midwest,D,Demand,79054,megawatthours
-2025-11-12T05,MIDW,Midwest,DF,Day-ahead demand forecast,75485,megawatthours
+2025-11-12T05,MIDW,Midwest,D,Demand,79026,megawatthours
+2025-11-12T05,MIDW,Midwest,DF,Day-ahead demand forecast,75520,megawatthours
 2025-11-12T05,NE,New England,D,Demand,12791,megawatthours
 2025-11-12T05,NE,New England,DF,Day-ahead demand forecast,12320,megawatthours
 2025-11-12T05,NW,Northwest,D,Demand,41521,megawatthours
@@ -124,12 +237,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T05,SE,Southeast,DF,Day-ahead demand forecast,28371,megawatthours
 2025-11-12T05,SW,Southwest,D,Demand,13146,megawatthours
 2025-11-12T05,SW,Southwest,DF,Day-ahead demand forecast,8511,megawatthours
-2025-11-12T05,TEN,Tennessee,D,Demand,19694,megawatthours
+2025-11-12T05,TEN,Tennessee,D,Demand,19574,megawatthours
 2025-11-12T05,TEN,Tennessee,DF,Day-ahead demand forecast,20177,megawatthours
 2025-11-12T05,TEX,Texas,D,Demand,47825,megawatthours
 2025-11-12T05,TEX,Texas,DF,Day-ahead demand forecast,47795,megawatthours
-2025-11-12T05,US48,United States Lower 48,D,Demand,469433,megawatthours
-2025-11-12T05,US48,United States Lower 48,DF,Day-ahead demand forecast,459279,megawatthours
+2025-11-12T05,US48,United States Lower 48,D,Demand,469285,megawatthours
+2025-11-12T05,US48,United States Lower 48,DF,Day-ahead demand forecast,459314,megawatthours
 2025-11-12T04,CAL,California,D,Demand,33381,megawatthours
 2025-11-12T04,CAL,California,DF,Day-ahead demand forecast,33352,megawatthours
 2025-11-12T04,CAR,Carolinas,D,Demand,29462,megawatthours
@@ -140,8 +253,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T04,FLA,Florida,DF,Day-ahead demand forecast,24981,megawatthours
 2025-11-12T04,MIDA,Mid-Atlantic,D,Demand,97699,megawatthours
 2025-11-12T04,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,95974,megawatthours
-2025-11-12T04,MIDW,Midwest,D,Demand,82416,megawatthours
-2025-11-12T04,MIDW,Midwest,DF,Day-ahead demand forecast,78225,megawatthours
+2025-11-12T04,MIDW,Midwest,D,Demand,82415,megawatthours
+2025-11-12T04,MIDW,Midwest,DF,Day-ahead demand forecast,78252,megawatthours
 2025-11-12T04,NE,New England,D,Demand,13248,megawatthours
 2025-11-12T04,NE,New England,DF,Day-ahead demand forecast,13250,megawatthours
 2025-11-12T04,NW,Northwest,D,Demand,42702,megawatthours
@@ -152,12 +265,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T04,SE,Southeast,DF,Day-ahead demand forecast,29335,megawatthours
 2025-11-12T04,SW,Southwest,D,Demand,13877,megawatthours
 2025-11-12T04,SW,Southwest,DF,Day-ahead demand forecast,9006,megawatthours
-2025-11-12T04,TEN,Tennessee,D,Demand,20652,megawatthours
+2025-11-12T04,TEN,Tennessee,D,Demand,20521,megawatthours
 2025-11-12T04,TEN,Tennessee,DF,Day-ahead demand forecast,20865,megawatthours
 2025-11-12T04,TEX,Texas,D,Demand,49681,megawatthours
 2025-11-12T04,TEX,Texas,DF,Day-ahead demand forecast,50055,megawatthours
-2025-11-12T04,US48,United States Lower 48,D,Demand,488259,megawatthours
-2025-11-12T04,US48,United States Lower 48,DF,Day-ahead demand forecast,477728,megawatthours
+2025-11-12T04,US48,United States Lower 48,D,Demand,488127,megawatthours
+2025-11-12T04,US48,United States Lower 48,DF,Day-ahead demand forecast,477755,megawatthours
 2025-11-12T03,CAL,California,D,Demand,34092,megawatthours
 2025-11-12T03,CAL,California,DF,Day-ahead demand forecast,34723,megawatthours
 2025-11-12T03,CAR,Carolinas,D,Demand,30730,megawatthours
@@ -168,8 +281,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T03,FLA,Florida,DF,Day-ahead demand forecast,26375,megawatthours
 2025-11-12T03,MIDA,Mid-Atlantic,D,Demand,102415,megawatthours
 2025-11-12T03,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,100084,megawatthours
-2025-11-12T03,MIDW,Midwest,D,Demand,85366,megawatthours
-2025-11-12T03,MIDW,Midwest,DF,Day-ahead demand forecast,80978,megawatthours
+2025-11-12T03,MIDW,Midwest,D,Demand,85364,megawatthours
+2025-11-12T03,MIDW,Midwest,DF,Day-ahead demand forecast,81036,megawatthours
 2025-11-12T03,NE,New England,D,Demand,14328,megawatthours
 2025-11-12T03,NE,New England,DF,Day-ahead demand forecast,14320,megawatthours
 2025-11-12T03,NW,Northwest,D,Demand,43465,megawatthours
@@ -180,12 +293,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T03,SE,Southeast,DF,Day-ahead demand forecast,30163,megawatthours
 2025-11-12T03,SW,Southwest,D,Demand,14160,megawatthours
 2025-11-12T03,SW,Southwest,DF,Day-ahead demand forecast,9265,megawatthours
-2025-11-12T03,TEN,Tennessee,D,Demand,21408,megawatthours
+2025-11-12T03,TEN,Tennessee,D,Demand,21276,megawatthours
 2025-11-12T03,TEN,Tennessee,DF,Day-ahead demand forecast,21533,megawatthours
 2025-11-12T03,TEX,Texas,D,Demand,50643,megawatthours
 2025-11-12T03,TEX,Texas,DF,Day-ahead demand forecast,51371,megawatthours
-2025-11-12T03,US48,United States Lower 48,D,Demand,506015,megawatthours
-2025-11-12T03,US48,United States Lower 48,DF,Day-ahead demand forecast,494789,megawatthours
+2025-11-12T03,US48,United States Lower 48,D,Demand,505881,megawatthours
+2025-11-12T03,US48,United States Lower 48,DF,Day-ahead demand forecast,494847,megawatthours
 2025-11-12T02,CAL,California,D,Demand,33284,megawatthours
 2025-11-12T02,CAL,California,DF,Day-ahead demand forecast,35846,megawatthours
 2025-11-12T02,CAR,Carolinas,D,Demand,31469,megawatthours
@@ -196,8 +309,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T02,FLA,Florida,DF,Day-ahead demand forecast,27319,megawatthours
 2025-11-12T02,MIDA,Mid-Atlantic,D,Demand,105790,megawatthours
 2025-11-12T02,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,104373,megawatthours
-2025-11-12T02,MIDW,Midwest,D,Demand,87193,megawatthours
-2025-11-12T02,MIDW,Midwest,DF,Day-ahead demand forecast,82665,megawatthours
+2025-11-12T02,MIDW,Midwest,D,Demand,87192,megawatthours
+2025-11-12T02,MIDW,Midwest,DF,Day-ahead demand forecast,82719,megawatthours
 2025-11-12T02,NE,New England,D,Demand,15181,megawatthours
 2025-11-12T02,NE,New England,DF,Day-ahead demand forecast,15130,megawatthours
 2025-11-12T02,NW,Northwest,D,Demand,44003,megawatthours
@@ -208,12 +321,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T02,SE,Southeast,DF,Day-ahead demand forecast,30585,megawatthours
 2025-11-12T02,SW,Southwest,D,Demand,14389,megawatthours
 2025-11-12T02,SW,Southwest,DF,Day-ahead demand forecast,9542,megawatthours
-2025-11-12T02,TEN,Tennessee,D,Demand,21938,megawatthours
+2025-11-12T02,TEN,Tennessee,D,Demand,21802,megawatthours
 2025-11-12T02,TEN,Tennessee,DF,Day-ahead demand forecast,21922,megawatthours
 2025-11-12T02,TEX,Texas,D,Demand,51053,megawatthours
 2025-11-12T02,TEX,Texas,DF,Day-ahead demand forecast,52287,megawatthours
-2025-11-12T02,US48,United States Lower 48,D,Demand,516770,megawatthours
-2025-11-12T02,US48,United States Lower 48,DF,Day-ahead demand forecast,507799,megawatthours
+2025-11-12T02,US48,United States Lower 48,D,Demand,516633,megawatthours
+2025-11-12T02,US48,United States Lower 48,DF,Day-ahead demand forecast,507853,megawatthours
 2025-11-12T01,CAL,California,D,Demand,32499,megawatthours
 2025-11-12T01,CAL,California,DF,Day-ahead demand forecast,35137,megawatthours
 2025-11-12T01,CAR,Carolinas,D,Demand,31652,megawatthours
@@ -224,8 +337,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T01,FLA,Florida,DF,Day-ahead demand forecast,27594,megawatthours
 2025-11-12T01,MIDA,Mid-Atlantic,D,Demand,107878,megawatthours
 2025-11-12T01,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,106751,megawatthours
-2025-11-12T01,MIDW,Midwest,D,Demand,88933,megawatthours
-2025-11-12T01,MIDW,Midwest,DF,Day-ahead demand forecast,83536,megawatthours
+2025-11-12T01,MIDW,Midwest,D,Demand,88932,megawatthours
+2025-11-12T01,MIDW,Midwest,DF,Day-ahead demand forecast,83593,megawatthours
 2025-11-12T01,NE,New England,D,Demand,15774,megawatthours
 2025-11-12T01,NE,New England,DF,Day-ahead demand forecast,15710,megawatthours
 2025-11-12T01,NW,Northwest,D,Demand,43051,megawatthours
@@ -236,12 +349,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T01,SE,Southeast,DF,Day-ahead demand forecast,30509,megawatthours
 2025-11-12T01,SW,Southwest,D,Demand,14585,megawatthours
 2025-11-12T01,SW,Southwest,DF,Day-ahead demand forecast,9586,megawatthours
-2025-11-12T01,TEN,Tennessee,D,Demand,21939,megawatthours
+2025-11-12T01,TEN,Tennessee,D,Demand,21805,megawatthours
 2025-11-12T01,TEN,Tennessee,DF,Day-ahead demand forecast,21826,megawatthours
 2025-11-12T01,TEX,Texas,D,Demand,51460,megawatthours
 2025-11-12T01,TEX,Texas,DF,Day-ahead demand forecast,52968,megawatthours
-2025-11-12T01,US48,United States Lower 48,D,Demand,521731,megawatthours
-2025-11-12T01,US48,United States Lower 48,DF,Day-ahead demand forecast,511694,megawatthours
+2025-11-12T01,US48,United States Lower 48,D,Demand,521596,megawatthours
+2025-11-12T01,US48,United States Lower 48,DF,Day-ahead demand forecast,511751,megawatthours
 2025-11-12T00,CAL,California,D,Demand,32945,megawatthours
 2025-11-12T00,CAL,California,DF,Day-ahead demand forecast,34099,megawatthours
 2025-11-12T00,CAR,Carolinas,D,Demand,31560,megawatthours
@@ -252,8 +365,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T00,FLA,Florida,DF,Day-ahead demand forecast,27225,megawatthours
 2025-11-12T00,MIDA,Mid-Atlantic,D,Demand,109091,megawatthours
 2025-11-12T00,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,107079,megawatthours
-2025-11-12T00,MIDW,Midwest,D,Demand,88882,megawatthours
-2025-11-12T00,MIDW,Midwest,DF,Day-ahead demand forecast,83181,megawatthours
+2025-11-12T00,MIDW,Midwest,D,Demand,88881,megawatthours
+2025-11-12T00,MIDW,Midwest,DF,Day-ahead demand forecast,83215,megawatthours
 2025-11-12T00,NE,New England,D,Demand,16125,megawatthours
 2025-11-12T00,NE,New England,DF,Day-ahead demand forecast,16120,megawatthours
 2025-11-12T00,NW,Northwest,D,Demand,41344,megawatthours
@@ -264,12 +377,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-12T00,SE,Southeast,DF,Day-ahead demand forecast,29819,megawatthours
 2025-11-12T00,SW,Southwest,D,Demand,14466,megawatthours
 2025-11-12T00,SW,Southwest,DF,Day-ahead demand forecast,9302,megawatthours
-2025-11-12T00,TEN,Tennessee,D,Demand,21757,megawatthours
+2025-11-12T00,TEN,Tennessee,D,Demand,21623,megawatthours
 2025-11-12T00,TEN,Tennessee,DF,Day-ahead demand forecast,21449,megawatthours
 2025-11-12T00,TEX,Texas,D,Demand,50614,megawatthours
 2025-11-12T00,TEX,Texas,DF,Day-ahead demand forecast,52262,megawatthours
-2025-11-12T00,US48,United States Lower 48,D,Demand,520208,megawatthours
-2025-11-12T00,US48,United States Lower 48,DF,Day-ahead demand forecast,505994,megawatthours
+2025-11-12T00,US48,United States Lower 48,D,Demand,520073,megawatthours
+2025-11-12T00,US48,United States Lower 48,DF,Day-ahead demand forecast,506028,megawatthours
 2025-11-11T23,CAL,California,D,Demand,32820,megawatthours
 2025-11-11T23,CAL,California,DF,Day-ahead demand forecast,32472,megawatthours
 2025-11-11T23,CAR,Carolinas,D,Demand,30153,megawatthours
@@ -281,7 +394,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T23,MIDA,Mid-Atlantic,D,Demand,108465,megawatthours
 2025-11-11T23,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,105899,megawatthours
 2025-11-11T23,MIDW,Midwest,D,Demand,86108,megawatthours
-2025-11-11T23,MIDW,Midwest,DF,Day-ahead demand forecast,80435,megawatthours
+2025-11-11T23,MIDW,Midwest,DF,Day-ahead demand forecast,80467,megawatthours
 2025-11-11T23,NE,New England,D,Demand,16360,megawatthours
 2025-11-11T23,NE,New England,DF,Day-ahead demand forecast,16200,megawatthours
 2025-11-11T23,NW,Northwest,D,Demand,41022,megawatthours
@@ -292,12 +405,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T23,SE,Southeast,DF,Day-ahead demand forecast,27742,megawatthours
 2025-11-11T23,SW,Southwest,D,Demand,13929,megawatthours
 2025-11-11T23,SW,Southwest,DF,Day-ahead demand forecast,8782,megawatthours
-2025-11-11T23,TEN,Tennessee,D,Demand,20614,megawatthours
+2025-11-11T23,TEN,Tennessee,D,Demand,20490,megawatthours
 2025-11-11T23,TEN,Tennessee,DF,Day-ahead demand forecast,20431,megawatthours
 2025-11-11T23,TEX,Texas,D,Demand,49632,megawatthours
 2025-11-11T23,TEX,Texas,DF,Day-ahead demand forecast,51925,megawatthours
-2025-11-11T23,US48,United States Lower 48,D,Demand,508294,megawatthours
-2025-11-11T23,US48,United States Lower 48,DF,Day-ahead demand forecast,491946,megawatthours
+2025-11-11T23,US48,United States Lower 48,D,Demand,508170,megawatthours
+2025-11-11T23,US48,United States Lower 48,DF,Day-ahead demand forecast,491978,megawatthours
 2025-11-11T22,CAL,California,D,Demand,33233,megawatthours
 2025-11-11T22,CAL,California,DF,Day-ahead demand forecast,30816,megawatthours
 2025-11-11T22,CAR,Carolinas,D,Demand,27880,megawatthours
@@ -309,7 +422,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T22,MIDA,Mid-Atlantic,D,Demand,104470,megawatthours
 2025-11-11T22,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,103134,megawatthours
 2025-11-11T22,MIDW,Midwest,D,Demand,83803,megawatthours
-2025-11-11T22,MIDW,Midwest,DF,Day-ahead demand forecast,77969,megawatthours
+2025-11-11T22,MIDW,Midwest,DF,Day-ahead demand forecast,77989,megawatthours
 2025-11-11T22,NE,New England,D,Demand,15811,megawatthours
 2025-11-11T22,NE,New England,DF,Day-ahead demand forecast,15620,megawatthours
 2025-11-11T22,NW,Northwest,D,Demand,40592,megawatthours
@@ -320,12 +433,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T22,SE,Southeast,DF,Day-ahead demand forecast,26735,megawatthours
 2025-11-11T22,SW,Southwest,D,Demand,13862,megawatthours
 2025-11-11T22,SW,Southwest,DF,Day-ahead demand forecast,8247,megawatthours
-2025-11-11T22,TEN,Tennessee,D,Demand,19837,megawatthours
+2025-11-11T22,TEN,Tennessee,D,Demand,19717,megawatthours
 2025-11-11T22,TEN,Tennessee,DF,Day-ahead demand forecast,19886,megawatthours
 2025-11-11T22,TEX,Texas,D,Demand,50062,megawatthours
 2025-11-11T22,TEX,Texas,DF,Day-ahead demand forecast,51772,megawatthours
-2025-11-11T22,US48,United States Lower 48,D,Demand,494597,megawatthours
-2025-11-11T22,US48,United States Lower 48,DF,Day-ahead demand forecast,477560,megawatthours
+2025-11-11T22,US48,United States Lower 48,D,Demand,494477,megawatthours
+2025-11-11T22,US48,United States Lower 48,DF,Day-ahead demand forecast,477580,megawatthours
 2025-11-11T21,CAL,California,D,Demand,33982,megawatthours
 2025-11-11T21,CAL,California,DF,Day-ahead demand forecast,29410,megawatthours
 2025-11-11T21,CAR,Carolinas,D,Demand,26687,megawatthours
@@ -337,7 +450,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T21,MIDA,Mid-Atlantic,D,Demand,102490,megawatthours
 2025-11-11T21,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,99985,megawatthours
 2025-11-11T21,MIDW,Midwest,D,Demand,78611,megawatthours
-2025-11-11T21,MIDW,Midwest,DF,Day-ahead demand forecast,77434,megawatthours
+2025-11-11T21,MIDW,Midwest,DF,Day-ahead demand forecast,77459,megawatthours
 2025-11-11T21,NE,New England,D,Demand,14748,megawatthours
 2025-11-11T21,NE,New England,DF,Day-ahead demand forecast,14700,megawatthours
 2025-11-11T21,NW,Northwest,D,Demand,40929,megawatthours
@@ -348,12 +461,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T21,SE,Southeast,DF,Day-ahead demand forecast,26761,megawatthours
 2025-11-11T21,SW,Southwest,D,Demand,13435,megawatthours
 2025-11-11T21,SW,Southwest,DF,Day-ahead demand forecast,7693,megawatthours
-2025-11-11T21,TEN,Tennessee,D,Demand,19661,megawatthours
+2025-11-11T21,TEN,Tennessee,D,Demand,19539,megawatthours
 2025-11-11T21,TEN,Tennessee,DF,Day-ahead demand forecast,19816,megawatthours
 2025-11-11T21,TEX,Texas,D,Demand,50369,megawatthours
 2025-11-11T21,TEX,Texas,DF,Day-ahead demand forecast,51714,megawatthours
-2025-11-11T21,US48,United States Lower 48,D,Demand,484212,megawatthours
-2025-11-11T21,US48,United States Lower 48,DF,Day-ahead demand forecast,468224,megawatthours
+2025-11-11T21,US48,United States Lower 48,D,Demand,484090,megawatthours
+2025-11-11T21,US48,United States Lower 48,DF,Day-ahead demand forecast,468249,megawatthours
 2025-11-11T20,CAL,California,D,Demand,33994,megawatthours
 2025-11-11T20,CAL,California,DF,Day-ahead demand forecast,28530,megawatthours
 2025-11-11T20,CAR,Carolinas,D,Demand,26646,megawatthours
@@ -365,7 +478,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T20,MIDA,Mid-Atlantic,D,Demand,101960,megawatthours
 2025-11-11T20,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,97522,megawatthours
 2025-11-11T20,MIDW,Midwest,D,Demand,79385,megawatthours
-2025-11-11T20,MIDW,Midwest,DF,Day-ahead demand forecast,78199,megawatthours
+2025-11-11T20,MIDW,Midwest,DF,Day-ahead demand forecast,78306,megawatthours
 2025-11-11T20,NE,New England,D,Demand,13974,megawatthours
 2025-11-11T20,NE,New England,DF,Day-ahead demand forecast,13890,megawatthours
 2025-11-11T20,NW,Northwest,D,Demand,41286,megawatthours
@@ -376,12 +489,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T20,SE,Southeast,DF,Day-ahead demand forecast,27398,megawatthours
 2025-11-11T20,SW,Southwest,D,Demand,13001,megawatthours
 2025-11-11T20,SW,Southwest,DF,Day-ahead demand forecast,7368,megawatthours
-2025-11-11T20,TEN,Tennessee,D,Demand,20104,megawatthours
+2025-11-11T20,TEN,Tennessee,D,Demand,19982,megawatthours
 2025-11-11T20,TEN,Tennessee,DF,Day-ahead demand forecast,20198,megawatthours
 2025-11-11T20,TEX,Texas,D,Demand,50259,megawatthours
 2025-11-11T20,TEX,Texas,DF,Day-ahead demand forecast,51581,megawatthours
-2025-11-11T20,US48,United States Lower 48,D,Demand,483995,megawatthours
-2025-11-11T20,US48,United States Lower 48,DF,Day-ahead demand forecast,465419,megawatthours
+2025-11-11T20,US48,United States Lower 48,D,Demand,483873,megawatthours
+2025-11-11T20,US48,United States Lower 48,DF,Day-ahead demand forecast,465526,megawatthours
 2025-11-11T19,CAL,California,D,Demand,33837,megawatthours
 2025-11-11T19,CAL,California,DF,Day-ahead demand forecast,28248,megawatthours
 2025-11-11T19,CAR,Carolinas,D,Demand,27201,megawatthours
@@ -393,7 +506,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T19,MIDA,Mid-Atlantic,D,Demand,102546,megawatthours
 2025-11-11T19,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,97440,megawatthours
 2025-11-11T19,MIDW,Midwest,D,Demand,80322,megawatthours
-2025-11-11T19,MIDW,Midwest,DF,Day-ahead demand forecast,79497,megawatthours
+2025-11-11T19,MIDW,Midwest,DF,Day-ahead demand forecast,79629,megawatthours
 2025-11-11T19,NE,New England,D,Demand,13408,megawatthours
 2025-11-11T19,NE,New England,DF,Day-ahead demand forecast,13500,megawatthours
 2025-11-11T19,NW,Northwest,D,Demand,41707,megawatthours
@@ -404,12 +517,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T19,SE,Southeast,DF,Day-ahead demand forecast,28273,megawatthours
 2025-11-11T19,SW,Southwest,D,Demand,12913,megawatthours
 2025-11-11T19,SW,Southwest,DF,Day-ahead demand forecast,7000,megawatthours
-2025-11-11T19,TEN,Tennessee,D,Demand,20520,megawatthours
+2025-11-11T19,TEN,Tennessee,D,Demand,20391,megawatthours
 2025-11-11T19,TEN,Tennessee,DF,Day-ahead demand forecast,20838,megawatthours
 2025-11-11T19,TEX,Texas,D,Demand,50831,megawatthours
 2025-11-11T19,TEX,Texas,DF,Day-ahead demand forecast,51778,megawatthours
-2025-11-11T19,US48,United States Lower 48,D,Demand,488175,megawatthours
-2025-11-11T19,US48,United States Lower 48,DF,Day-ahead demand forecast,468504,megawatthours
+2025-11-11T19,US48,United States Lower 48,D,Demand,488046,megawatthours
+2025-11-11T19,US48,United States Lower 48,DF,Day-ahead demand forecast,468636,megawatthours
 2025-11-11T18,CAL,California,D,Demand,33264,megawatthours
 2025-11-11T18,CAL,California,DF,Day-ahead demand forecast,28254,megawatthours
 2025-11-11T18,CAR,Carolinas,D,Demand,28103,megawatthours
@@ -421,7 +534,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T18,MIDA,Mid-Atlantic,D,Demand,102930,megawatthours
 2025-11-11T18,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,98093,megawatthours
 2025-11-11T18,MIDW,Midwest,D,Demand,81892,megawatthours
-2025-11-11T18,MIDW,Midwest,DF,Day-ahead demand forecast,81274,megawatthours
+2025-11-11T18,MIDW,Midwest,DF,Day-ahead demand forecast,81396,megawatthours
 2025-11-11T18,NE,New England,D,Demand,13105,megawatthours
 2025-11-11T18,NE,New England,DF,Day-ahead demand forecast,13120,megawatthours
 2025-11-11T18,NW,Northwest,D,Demand,41847,megawatthours
@@ -432,12 +545,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T18,SE,Southeast,DF,Day-ahead demand forecast,29222,megawatthours
 2025-11-11T18,SW,Southwest,D,Demand,12762,megawatthours
 2025-11-11T18,SW,Southwest,DF,Day-ahead demand forecast,7033,megawatthours
-2025-11-11T18,TEN,Tennessee,D,Demand,21255,megawatthours
+2025-11-11T18,TEN,Tennessee,D,Demand,21121,megawatthours
 2025-11-11T18,TEN,Tennessee,DF,Day-ahead demand forecast,21643,megawatthours
 2025-11-11T18,TEX,Texas,D,Demand,51199,megawatthours
 2025-11-11T18,TEX,Texas,DF,Day-ahead demand forecast,52754,megawatthours
-2025-11-11T18,US48,United States Lower 48,D,Demand,493425,megawatthours
-2025-11-11T18,US48,United States Lower 48,DF,Day-ahead demand forecast,475614,megawatthours
+2025-11-11T18,US48,United States Lower 48,D,Demand,493291,megawatthours
+2025-11-11T18,US48,United States Lower 48,DF,Day-ahead demand forecast,475736,megawatthours
 2025-11-11T17,CAL,California,D,Demand,30798,megawatthours
 2025-11-11T17,CAL,California,DF,Day-ahead demand forecast,28490,megawatthours
 2025-11-11T17,CAR,Carolinas,D,Demand,29228,megawatthours
@@ -449,7 +562,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T17,MIDA,Mid-Atlantic,D,Demand,103996,megawatthours
 2025-11-11T17,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,98891,megawatthours
 2025-11-11T17,MIDW,Midwest,D,Demand,83529,megawatthours
-2025-11-11T17,MIDW,Midwest,DF,Day-ahead demand forecast,83432,megawatthours
+2025-11-11T17,MIDW,Midwest,DF,Day-ahead demand forecast,83525,megawatthours
 2025-11-11T17,NE,New England,D,Demand,13179,megawatthours
 2025-11-11T17,NE,New England,DF,Day-ahead demand forecast,12980,megawatthours
 2025-11-11T17,NW,Northwest,D,Demand,42360,megawatthours
@@ -460,12 +573,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T17,SE,Southeast,DF,Day-ahead demand forecast,30722,megawatthours
 2025-11-11T17,SW,Southwest,D,Demand,12741,megawatthours
 2025-11-11T17,SW,Southwest,DF,Day-ahead demand forecast,7084,megawatthours
-2025-11-11T17,TEN,Tennessee,D,Demand,22075,megawatthours
+2025-11-11T17,TEN,Tennessee,D,Demand,21937,megawatthours
 2025-11-11T17,TEN,Tennessee,DF,Day-ahead demand forecast,22432,megawatthours
 2025-11-11T17,TEX,Texas,D,Demand,51886,megawatthours
 2025-11-11T17,TEX,Texas,DF,Day-ahead demand forecast,54467,megawatthours
-2025-11-11T17,US48,United States Lower 48,D,Demand,500308,megawatthours
-2025-11-11T17,US48,United States Lower 48,DF,Day-ahead demand forecast,486051,megawatthours
+2025-11-11T17,US48,United States Lower 48,D,Demand,500170,megawatthours
+2025-11-11T17,US48,United States Lower 48,DF,Day-ahead demand forecast,486144,megawatthours
 2025-11-11T16,CAL,California,D,Demand,27854,megawatthours
 2025-11-11T16,CAL,California,DF,Day-ahead demand forecast,28725,megawatthours
 2025-11-11T16,CAR,Carolinas,D,Demand,30668,megawatthours
@@ -477,7 +590,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T16,MIDA,Mid-Atlantic,D,Demand,104957,megawatthours
 2025-11-11T16,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,100568,megawatthours
 2025-11-11T16,MIDW,Midwest,D,Demand,85430,megawatthours
-2025-11-11T16,MIDW,Midwest,DF,Day-ahead demand forecast,85768,megawatthours
+2025-11-11T16,MIDW,Midwest,DF,Day-ahead demand forecast,85838,megawatthours
 2025-11-11T16,NE,New England,D,Demand,13262,megawatthours
 2025-11-11T16,NE,New England,DF,Day-ahead demand forecast,12780,megawatthours
 2025-11-11T16,NW,Northwest,D,Demand,42255,megawatthours
@@ -488,12 +601,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T16,SE,Southeast,DF,Day-ahead demand forecast,32672,megawatthours
 2025-11-11T16,SW,Southwest,D,Demand,12395,megawatthours
 2025-11-11T16,SW,Southwest,DF,Day-ahead demand forecast,7418,megawatthours
-2025-11-11T16,TEN,Tennessee,D,Demand,22929,megawatthours
+2025-11-11T16,TEN,Tennessee,D,Demand,22789,megawatthours
 2025-11-11T16,TEN,Tennessee,DF,Day-ahead demand forecast,23491,megawatthours
 2025-11-11T16,TEX,Texas,D,Demand,53214,megawatthours
 2025-11-11T16,TEX,Texas,DF,Day-ahead demand forecast,56204,megawatthours
-2025-11-11T16,US48,United States Lower 48,D,Demand,506508,megawatthours
-2025-11-11T16,US48,United States Lower 48,DF,Day-ahead demand forecast,499252,megawatthours
+2025-11-11T16,US48,United States Lower 48,D,Demand,506368,megawatthours
+2025-11-11T16,US48,United States Lower 48,DF,Day-ahead demand forecast,499322,megawatthours
 2025-11-11T15,CAL,California,D,Demand,26224,megawatthours
 2025-11-11T15,CAL,California,DF,Day-ahead demand forecast,27804,megawatthours
 2025-11-11T15,CAR,Carolinas,D,Demand,32158,megawatthours
@@ -504,8 +617,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T15,FLA,Florida,DF,Day-ahead demand forecast,27688,megawatthours
 2025-11-11T15,MIDA,Mid-Atlantic,D,Demand,105418,megawatthours
 2025-11-11T15,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,103028,megawatthours
-2025-11-11T15,MIDW,Midwest,D,Demand,93151,megawatthours
-2025-11-11T15,MIDW,Midwest,DF,Day-ahead demand forecast,87869,megawatthours
+2025-11-11T15,MIDW,Midwest,D,Demand,93188,megawatthours
+2025-11-11T15,MIDW,Midwest,DF,Day-ahead demand forecast,87916,megawatthours
 2025-11-11T15,NE,New England,D,Demand,13144,megawatthours
 2025-11-11T15,NE,New England,DF,Day-ahead demand forecast,13080,megawatthours
 2025-11-11T15,NW,Northwest,D,Demand,41326,megawatthours
@@ -516,12 +629,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T15,SE,Southeast,DF,Day-ahead demand forecast,35010,megawatthours
 2025-11-11T15,SW,Southwest,D,Demand,12020,megawatthours
 2025-11-11T15,SW,Southwest,DF,Day-ahead demand forecast,8041,megawatthours
-2025-11-11T15,TEN,Tennessee,D,Demand,24254,megawatthours
+2025-11-11T15,TEN,Tennessee,D,Demand,24104,megawatthours
 2025-11-11T15,TEN,Tennessee,DF,Day-ahead demand forecast,24693,megawatthours
 2025-11-11T15,TEX,Texas,D,Demand,53846,megawatthours
 2025-11-11T15,TEX,Texas,DF,Day-ahead demand forecast,56777,megawatthours
-2025-11-11T15,US48,United States Lower 48,D,Demand,518099,megawatthours
-2025-11-11T15,US48,United States Lower 48,DF,Day-ahead demand forecast,511199,megawatthours
+2025-11-11T15,US48,United States Lower 48,D,Demand,517986,megawatthours
+2025-11-11T15,US48,United States Lower 48,DF,Day-ahead demand forecast,511246,megawatthours
 2025-11-11T14,CAL,California,D,Demand,25126,megawatthours
 2025-11-11T14,CAL,California,DF,Day-ahead demand forecast,26059,megawatthours
 2025-11-11T14,CAR,Carolinas,D,Demand,33187,megawatthours
@@ -532,8 +645,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T14,FLA,Florida,DF,Day-ahead demand forecast,29528,megawatthours
 2025-11-11T14,MIDA,Mid-Atlantic,D,Demand,106137,megawatthours
 2025-11-11T14,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,106015,megawatthours
-2025-11-11T14,MIDW,Midwest,D,Demand,94465,megawatthours
-2025-11-11T14,MIDW,Midwest,DF,Day-ahead demand forecast,89388,megawatthours
+2025-11-11T14,MIDW,Midwest,D,Demand,94463,megawatthours
+2025-11-11T14,MIDW,Midwest,DF,Day-ahead demand forecast,89448,megawatthours
 2025-11-11T14,NE,New England,D,Demand,12964,megawatthours
 2025-11-11T14,NE,New England,DF,Day-ahead demand forecast,13000,megawatthours
 2025-11-11T14,NW,Northwest,D,Demand,39129,megawatthours
@@ -544,12 +657,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T14,SE,Southeast,DF,Day-ahead demand forecast,37035,megawatthours
 2025-11-11T14,SW,Southwest,D,Demand,11930,megawatthours
 2025-11-11T14,SW,Southwest,DF,Day-ahead demand forecast,8142,megawatthours
-2025-11-11T14,TEN,Tennessee,D,Demand,25706,megawatthours
+2025-11-11T14,TEN,Tennessee,D,Demand,25550,megawatthours
 2025-11-11T14,TEN,Tennessee,DF,Day-ahead demand forecast,26011,megawatthours
 2025-11-11T14,TEX,Texas,D,Demand,53673,megawatthours
 2025-11-11T14,TEX,Texas,DF,Day-ahead demand forecast,56223,megawatthours
-2025-11-11T14,US48,United States Lower 48,D,Demand,520973,megawatthours
-2025-11-11T14,US48,United States Lower 48,DF,Day-ahead demand forecast,519122,megawatthours
+2025-11-11T14,US48,United States Lower 48,D,Demand,520815,megawatthours
+2025-11-11T14,US48,United States Lower 48,DF,Day-ahead demand forecast,519182,megawatthours
 2025-11-11T13,CAL,California,D,Demand,24855,megawatthours
 2025-11-11T13,CAL,California,DF,Day-ahead demand forecast,24776,megawatthours
 2025-11-11T13,CAR,Carolinas,D,Demand,33916,megawatthours
@@ -560,8 +673,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T13,FLA,Florida,DF,Day-ahead demand forecast,29179,megawatthours
 2025-11-11T13,MIDA,Mid-Atlantic,D,Demand,106589,megawatthours
 2025-11-11T13,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,109780,megawatthours
-2025-11-11T13,MIDW,Midwest,D,Demand,93614,megawatthours
-2025-11-11T13,MIDW,Midwest,DF,Day-ahead demand forecast,88149,megawatthours
+2025-11-11T13,MIDW,Midwest,D,Demand,93613,megawatthours
+2025-11-11T13,MIDW,Midwest,DF,Day-ahead demand forecast,88199,megawatthours
 2025-11-11T13,NE,New England,D,Demand,13259,megawatthours
 2025-11-11T13,NE,New England,DF,Day-ahead demand forecast,13360,megawatthours
 2025-11-11T13,NW,Northwest,D,Demand,36465,megawatthours
@@ -572,12 +685,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T13,SE,Southeast,DF,Day-ahead demand forecast,37035,megawatthours
 2025-11-11T13,SW,Southwest,D,Demand,11444,megawatthours
 2025-11-11T13,SW,Southwest,DF,Day-ahead demand forecast,7864,megawatthours
-2025-11-11T13,TEN,Tennessee,D,Demand,26105,megawatthours
+2025-11-11T13,TEN,Tennessee,D,Demand,25943,megawatthours
 2025-11-11T13,TEN,Tennessee,DF,Day-ahead demand forecast,26174,megawatthours
 2025-11-11T13,TEX,Texas,D,Demand,52649,megawatthours
 2025-11-11T13,TEX,Texas,DF,Day-ahead demand forecast,55018,megawatthours
-2025-11-11T13,US48,United States Lower 48,D,Demand,515841,megawatthours
-2025-11-11T13,US48,United States Lower 48,DF,Day-ahead demand forecast,516359,megawatthours
+2025-11-11T13,US48,United States Lower 48,D,Demand,515678,megawatthours
+2025-11-11T13,US48,United States Lower 48,DF,Day-ahead demand forecast,516409,megawatthours
 2025-11-11T12,CAL,California,D,Demand,25218,megawatthours
 2025-11-11T12,CAL,California,DF,Day-ahead demand forecast,24394,megawatthours
 2025-11-11T12,CAR,Carolinas,D,Demand,33018,megawatthours
@@ -588,8 +701,8 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T12,FLA,Florida,DF,Day-ahead demand forecast,26461,megawatthours
 2025-11-11T12,MIDA,Mid-Atlantic,D,Demand,103160,megawatthours
 2025-11-11T12,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,111565,megawatthours
-2025-11-11T12,MIDW,Midwest,D,Demand,89055,megawatthours
-2025-11-11T12,MIDW,Midwest,DF,Day-ahead demand forecast,84118,megawatthours
+2025-11-11T12,MIDW,Midwest,D,Demand,89054,megawatthours
+2025-11-11T12,MIDW,Midwest,DF,Day-ahead demand forecast,84122,megawatthours
 2025-11-11T12,NE,New England,D,Demand,13360,megawatthours
 2025-11-11T12,NE,New England,DF,Day-ahead demand forecast,12760,megawatthours
 2025-11-11T12,NW,Northwest,D,Demand,35053,megawatthours
@@ -600,12 +713,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T12,SE,Southeast,DF,Day-ahead demand forecast,35245,megawatthours
 2025-11-11T12,SW,Southwest,D,Demand,11080,megawatthours
 2025-11-11T12,SW,Southwest,DF,Day-ahead demand forecast,7504,megawatthours
-2025-11-11T12,TEN,Tennessee,D,Demand,25067,megawatthours
+2025-11-11T12,TEN,Tennessee,D,Demand,24916,megawatthours
 2025-11-11T12,TEN,Tennessee,DF,Day-ahead demand forecast,25117,megawatthours
 2025-11-11T12,TEX,Texas,D,Demand,49355,megawatthours
 2025-11-11T12,TEX,Texas,DF,Day-ahead demand forecast,51936,megawatthours
-2025-11-11T12,US48,United States Lower 48,D,Demand,494873,megawatthours
-2025-11-11T12,US48,United States Lower 48,DF,Day-ahead demand forecast,499546,megawatthours
+2025-11-11T12,US48,United States Lower 48,D,Demand,494721,megawatthours
+2025-11-11T12,US48,United States Lower 48,DF,Day-ahead demand forecast,499550,megawatthours
 2025-11-11T11,CAL,California,D,Demand,25678,megawatthours
 2025-11-11T11,CAL,California,DF,Day-ahead demand forecast,24780,megawatthours
 2025-11-11T11,CAR,Carolinas,D,Demand,31381,megawatthours
@@ -617,7 +730,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T11,MIDA,Mid-Atlantic,D,Demand,97117,megawatthours
 2025-11-11T11,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,107699,megawatthours
 2025-11-11T11,MIDW,Midwest,D,Demand,84911,megawatthours
-2025-11-11T11,MIDW,Midwest,DF,Day-ahead demand forecast,80122,megawatthours
+2025-11-11T11,MIDW,Midwest,DF,Day-ahead demand forecast,80114,megawatthours
 2025-11-11T11,NE,New England,D,Demand,12659,megawatthours
 2025-11-11T11,NE,New England,DF,Day-ahead demand forecast,11630,megawatthours
 2025-11-11T11,NW,Northwest,D,Demand,34639,megawatthours
@@ -628,12 +741,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T11,SE,Southeast,DF,Day-ahead demand forecast,33049,megawatthours
 2025-11-11T11,SW,Southwest,D,Demand,10863,megawatthours
 2025-11-11T11,SW,Southwest,DF,Day-ahead demand forecast,7271,megawatthours
-2025-11-11T11,TEN,Tennessee,D,Demand,23817,megawatthours
+2025-11-11T11,TEN,Tennessee,D,Demand,23674,megawatthours
 2025-11-11T11,TEN,Tennessee,DF,Day-ahead demand forecast,23870,megawatthours
 2025-11-11T11,TEX,Texas,D,Demand,47290,megawatthours
 2025-11-11T11,TEX,Texas,DF,Day-ahead demand forecast,49491,megawatthours
-2025-11-11T11,US48,United States Lower 48,D,Demand,471683,megawatthours
-2025-11-11T11,US48,United States Lower 48,DF,Day-ahead demand forecast,478005,megawatthours
+2025-11-11T11,US48,United States Lower 48,D,Demand,471540,megawatthours
+2025-11-11T11,US48,United States Lower 48,DF,Day-ahead demand forecast,477997,megawatthours
 2025-11-11T10,CAL,California,D,Demand,26841,megawatthours
 2025-11-11T10,CAL,California,DF,Day-ahead demand forecast,25602,megawatthours
 2025-11-11T10,CAR,Carolinas,D,Demand,29709,megawatthours
@@ -645,7 +758,7 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T10,MIDA,Mid-Atlantic,D,Demand,92986,megawatthours
 2025-11-11T10,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,100500,megawatthours
 2025-11-11T10,MIDW,Midwest,D,Demand,82301,megawatthours
-2025-11-11T10,MIDW,Midwest,DF,Day-ahead demand forecast,77890,megawatthours
+2025-11-11T10,MIDW,Midwest,DF,Day-ahead demand forecast,77886,megawatthours
 2025-11-11T10,NE,New England,D,Demand,11909,megawatthours
 2025-11-11T10,NE,New England,DF,Day-ahead demand forecast,10800,megawatthours
 2025-11-11T10,NW,Northwest,D,Demand,34740,megawatthours
@@ -656,12 +769,12 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T10,SE,Southeast,DF,Day-ahead demand forecast,31413,megawatthours
 2025-11-11T10,SW,Southwest,D,Demand,10982,megawatthours
 2025-11-11T10,SW,Southwest,DF,Day-ahead demand forecast,7251,megawatthours
-2025-11-11T10,TEN,Tennessee,D,Demand,23218,megawatthours
+2025-11-11T10,TEN,Tennessee,D,Demand,23077,megawatthours
 2025-11-11T10,TEN,Tennessee,DF,Day-ahead demand forecast,23166,megawatthours
 2025-11-11T10,TEX,Texas,D,Demand,46264,megawatthours
 2025-11-11T10,TEX,Texas,DF,Day-ahead demand forecast,48756,megawatthours
-2025-11-11T10,US48,United States Lower 48,D,Demand,458038,megawatthours
-2025-11-11T10,US48,United States Lower 48,DF,Day-ahead demand forecast,460540,megawatthours
+2025-11-11T10,US48,United States Lower 48,D,Demand,457897,megawatthours
+2025-11-11T10,US48,United States Lower 48,DF,Day-ahead demand forecast,460536,megawatthours
 2025-11-11T09,CAL,California,D,Demand,27798,megawatthours
 2025-11-11T09,CAL,California,DF,Day-ahead demand forecast,26744,megawatthours
 2025-11-11T09,CAR,Carolinas,D,Demand,28707,megawatthours
@@ -684,11 +797,11 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-11T09,SE,Southeast,DF,Day-ahead demand forecast,30367,megawatthours
 2025-11-11T09,SW,Southwest,D,Demand,11183,megawatthours
 2025-11-11T09,SW,Southwest,DF,Day-ahead demand forecast,7300,megawatthours
-2025-11-11T09,TEN,Tennessee,D,Demand,22772,megawatthours
+2025-11-11T09,TEN,Tennessee,D,Demand,22625,megawatthours
 2025-11-11T09,TEN,Tennessee,DF,Day-ahead demand forecast,22878,megawatthours
 2025-11-11T09,TEX,Texas,D,Demand,46383,megawatthours
 2025-11-11T09,TEX,Texas,DF,Day-ahead demand forecast,48694,megawatthours
-2025-11-11T09,US48,United States Lower 48,D,Demand,454260,megawatthours
+2025-11-11T09,US48,United States Lower 48,D,Demand,454113,megawatthours
 2025-11-11T09,US48,United States Lower 48,DF,Day-ahead demand forecast,452747,megawatthours
 2025-11-11T08,CAL,California,D,Demand,29572,megawatthours
 2025-11-11T08,CAL,California,DF,Day-ahead demand forecast,27636,megawatthours
@@ -4886,116 +4999,3 @@ period,respondent,respondent-name,type,type-name,value,value-units
 2025-11-08T03,NW,Northwest,D,Demand,42943,megawatthours
 2025-11-08T03,NW,Northwest,DF,Day-ahead demand forecast,42169,megawatthours
 2025-11-08T03,NW,Northwest,NG,Net generation,46270,megawatthours
-2025-11-08T03,NW,Northwest,TI,Total interchange,3334,megawatthours
-2025-11-08T03,NY,New York,D,Demand,16145,megawatthours
-2025-11-08T03,NY,New York,DF,Day-ahead demand forecast,15893,megawatthours
-2025-11-08T03,NY,New York,NG,Net generation,15306,megawatthours
-2025-11-08T03,NY,New York,TI,Total interchange,-839,megawatthours
-2025-11-08T03,SE,Southeast,D,Demand,23417,megawatthours
-2025-11-08T03,SE,Southeast,DF,Day-ahead demand forecast,22988,megawatthours
-2025-11-08T03,SE,Southeast,NG,Net generation,26055,megawatthours
-2025-11-08T03,SE,Southeast,TI,Total interchange,2639,megawatthours
-2025-11-08T03,SW,Southwest,D,Demand,13508,megawatthours
-2025-11-08T03,SW,Southwest,DF,Day-ahead demand forecast,12943,megawatthours
-2025-11-08T03,SW,Southwest,NG,Net generation,14866,megawatthours
-2025-11-08T03,SW,Southwest,TI,Total interchange,1398,megawatthours
-2025-11-08T03,TEN,Tennessee,D,Demand,16451,megawatthours
-2025-11-08T03,TEN,Tennessee,DF,Day-ahead demand forecast,16443,megawatthours
-2025-11-08T03,TEN,Tennessee,NG,Net generation,15429,megawatthours
-2025-11-08T03,TEN,Tennessee,TI,Total interchange,-1023,megawatthours
-2025-11-08T03,TEX,Texas,D,Demand,52113,megawatthours
-2025-11-08T03,TEX,Texas,DF,Day-ahead demand forecast,54291,megawatthours
-2025-11-08T03,TEX,Texas,NG,Net generation,51830,megawatthours
-2025-11-08T03,TEX,Texas,TI,Total interchange,-283,megawatthours
-2025-11-08T03,US48,United States Lower 48,D,Demand,451378,megawatthours
-2025-11-08T03,US48,United States Lower 48,DF,Day-ahead demand forecast,449280,megawatthours
-2025-11-08T03,US48,United States Lower 48,NG,Net generation,451686,megawatthours
-2025-11-08T03,US48,United States Lower 48,TI,Total interchange,516,megawatthours
-2025-11-08T02,CAL,California,D,Demand,32966,megawatthours
-2025-11-08T02,CAL,California,DF,Day-ahead demand forecast,33552,megawatthours
-2025-11-08T02,CAL,California,NG,Net generation,27496,megawatthours
-2025-11-08T02,CAL,California,TI,Total interchange,-6388,megawatthours
-2025-11-08T02,CAR,Carolinas,D,Demand,22699,megawatthours
-2025-11-08T02,CAR,Carolinas,DF,Day-ahead demand forecast,22726,megawatthours
-2025-11-08T02,CAR,Carolinas,NG,Net generation,23467,megawatthours
-2025-11-08T02,CAR,Carolinas,TI,Total interchange,803,megawatthours
-2025-11-08T02,CENT,Central,D,Demand,31146,megawatthours
-2025-11-08T02,CENT,Central,DF,Day-ahead demand forecast,34634,megawatthours
-2025-11-08T02,CENT,Central,NG,Net generation,31446,megawatthours
-2025-11-08T02,CENT,Central,TI,Total interchange,300,megawatthours
-2025-11-08T02,FLA,Florida,D,Demand,30752,megawatthours
-2025-11-08T02,FLA,Florida,DF,Day-ahead demand forecast,28626,megawatthours
-2025-11-08T02,FLA,Florida,NG,Net generation,30277,megawatthours
-2025-11-08T02,FLA,Florida,TI,Total interchange,209,megawatthours
-2025-11-08T02,MIDA,Mid-Atlantic,D,Demand,87141,megawatthours
-2025-11-08T02,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,84901,megawatthours
-2025-11-08T02,MIDA,Mid-Atlantic,NG,Net generation,86462,megawatthours
-2025-11-08T02,MIDA,Mid-Atlantic,TI,Total interchange,935,megawatthours
-2025-11-08T02,MIDW,Midwest,D,Demand,76199,megawatthours
-2025-11-08T02,MIDW,Midwest,DF,Day-ahead demand forecast,76965,megawatthours
-2025-11-08T02,MIDW,Midwest,NG,Net generation,77837,megawatthours
-2025-11-08T02,MIDW,Midwest,TI,Total interchange,-140,megawatthours
-2025-11-08T02,NE,New England,D,Demand,13237,megawatthours
-2025-11-08T02,NE,New England,DF,Day-ahead demand forecast,13260,megawatthours
-2025-11-08T02,NE,New England,NG,Net generation,13594,megawatthours
-2025-11-08T02,NE,New England,TI,Total interchange,357,megawatthours
-2025-11-08T02,NW,Northwest,D,Demand,43420,megawatthours
-2025-11-08T02,NW,Northwest,DF,Day-ahead demand forecast,42334,megawatthours
-2025-11-08T02,NW,Northwest,NG,Net generation,46279,megawatthours
-2025-11-08T02,NW,Northwest,TI,Total interchange,2868,megawatthours
-2025-11-08T02,NY,New York,D,Demand,16758,megawatthours
-2025-11-08T02,NY,New York,DF,Day-ahead demand forecast,16492,megawatthours
-2025-11-08T02,NY,New York,NG,Net generation,16019,megawatthours
-2025-11-08T02,NY,New York,TI,Total interchange,-739,megawatthours
-2025-11-08T02,SE,Southeast,D,Demand,24074,megawatthours
-2025-11-08T02,SE,Southeast,DF,Day-ahead demand forecast,23882,megawatthours
-2025-11-08T02,SE,Southeast,NG,Net generation,26602,megawatthours
-2025-11-08T02,SE,Southeast,TI,Total interchange,2529,megawatthours
-2025-11-08T02,SW,Southwest,D,Demand,13945,megawatthours
-2025-11-08T02,SW,Southwest,DF,Day-ahead demand forecast,13523,megawatthours
-2025-11-08T02,SW,Southwest,NG,Net generation,15187,megawatthours
-2025-11-08T02,SW,Southwest,TI,Total interchange,1271,megawatthours
-2025-11-08T02,TEN,Tennessee,D,Demand,16887,megawatthours
-2025-11-08T02,TEN,Tennessee,DF,Day-ahead demand forecast,16955,megawatthours
-2025-11-08T02,TEN,Tennessee,NG,Net generation,16032,megawatthours
-2025-11-08T02,TEN,Tennessee,TI,Total interchange,-862,megawatthours
-2025-11-08T02,TEX,Texas,D,Demand,52870,megawatthours
-2025-11-08T02,TEX,Texas,DF,Day-ahead demand forecast,55578,megawatthours
-2025-11-08T02,TEX,Texas,NG,Net generation,52339,megawatthours
-2025-11-08T02,TEX,Texas,TI,Total interchange,-531,megawatthours
-2025-11-08T02,US48,United States Lower 48,D,Demand,462094,megawatthours
-2025-11-08T02,US48,United States Lower 48,DF,Day-ahead demand forecast,463428,megawatthours
-2025-11-08T02,US48,United States Lower 48,NG,Net generation,463037,megawatthours
-2025-11-08T02,US48,United States Lower 48,TI,Total interchange,612,megawatthours
-2025-11-08T01,CAL,California,D,Demand,32841,megawatthours
-2025-11-08T01,CAL,California,DF,Day-ahead demand forecast,32283,megawatthours
-2025-11-08T01,CAL,California,NG,Net generation,28823,megawatthours
-2025-11-08T01,CAL,California,TI,Total interchange,-5630,megawatthours
-2025-11-08T01,CAR,Carolinas,D,Demand,23261,megawatthours
-2025-11-08T01,CAR,Carolinas,DF,Day-ahead demand forecast,23539,megawatthours
-2025-11-08T01,CAR,Carolinas,NG,Net generation,23874,megawatthours
-2025-11-08T01,CAR,Carolinas,TI,Total interchange,651,megawatthours
-2025-11-08T01,CENT,Central,D,Demand,31788,megawatthours
-2025-11-08T01,CENT,Central,DF,Day-ahead demand forecast,35085,megawatthours
-2025-11-08T01,CENT,Central,NG,Net generation,31555,megawatthours
-2025-11-08T01,CENT,Central,TI,Total interchange,-234,megawatthours
-2025-11-08T01,FLA,Florida,D,Demand,32334,megawatthours
-2025-11-08T01,FLA,Florida,DF,Day-ahead demand forecast,30108,megawatthours
-2025-11-08T01,FLA,Florida,NG,Net generation,31858,megawatthours
-2025-11-08T01,FLA,Florida,TI,Total interchange,223,megawatthours
-2025-11-08T01,MIDA,Mid-Atlantic,D,Demand,89235,megawatthours
-2025-11-08T01,MIDA,Mid-Atlantic,DF,Day-ahead demand forecast,87375,megawatthours
-2025-11-08T01,MIDA,Mid-Atlantic,NG,Net generation,88227,megawatthours
-2025-11-08T01,MIDA,Mid-Atlantic,TI,Total interchange,1049,megawatthours
-2025-11-08T01,MIDW,Midwest,D,Demand,78047,megawatthours
-2025-11-08T01,MIDW,Midwest,DF,Day-ahead demand forecast,78552,megawatthours
-2025-11-08T01,MIDW,Midwest,NG,Net generation,79283,megawatthours
-2025-11-08T01,MIDW,Midwest,TI,Total interchange,-639,megawatthours
-2025-11-08T01,NE,New England,D,Demand,13768,megawatthours
-2025-11-08T01,NE,New England,DF,Day-ahead demand forecast,13940,megawatthours
-2025-11-08T01,NE,New England,NG,Net generation,14316,megawatthours
-2025-11-08T01,NE,New England,TI,Total interchange,548,megawatthours
-2025-11-08T01,NW,Northwest,D,Demand,43065,megawatthours
-2025-11-08T01,NW,Northwest,DF,Day-ahead demand forecast,41588,megawatthours
-2025-11-08T01,NW,Northwest,NG,Net generation,45319,megawatthours
-2025-11-08T01,NW,Northwest,TI,Total interchange,2259,megawatthours

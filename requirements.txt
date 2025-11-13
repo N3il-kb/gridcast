@@ -7,3 +7,4 @@ statsmodels
 kagglehub
 geopandas
 matplotlib
+prophet

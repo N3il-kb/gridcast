@@ -9,6 +9,7 @@ const sections = [
     text: `Every search, every AI query, every cloud upload — they all run through datacenters.
 These massive facilities house thousands of servers that process, store, and transmit data around the clock.
 In essence, datacenters are the factories of the digital era — the invisible engines powering everything from Netflix to GPT.`,
+    background: "/images/datacenter-bg.jpg",
   },
   {
     id: "future",
@@ -124,40 +125,55 @@ function FeatureCard({ title, text }) {
   );
 }
 
-function FullScreenSection({ title, text }) {
+function FullScreenSection({ title, text, background }) {
   return (
-    <section className="flex items-center justify-center h-screen px-6 md:px-24 text-center relative overflow-hidden">
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.2 }}
-        viewport={{ once: true }}
-        className="max-w-3xl z-10"
-      >
-        <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-[0_0_20px_rgba(0,255,128,0.25)]">
-          {title}
-        </h2>
-        <p className="text-lg md:text-xl leading-relaxed text-gray-300 whitespace-pre-line">
-          {text}
-        </p>
-      </motion.div>
+    <section className="relative isolate flex h-screen items-center justify-center overflow-hidden px-6 text-center md:px-24">
+      {background ? (
+        <motion.div
+          aria-hidden="true"
+          className="absolute inset-0 z-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${background})` }}
+          initial={{ scale: 1.05, opacity: 0.6 }}
+          whileInView={{ scale: 1, opacity: 0.95 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          viewport={{ once: true }}
+        />
+      ) : (
+        <div className="absolute inset-0 z-0 bg-black" aria-hidden="true" />
+      )}
 
-      {/* Soft gradient overlay */}
+      {/* Soft gradient overlay to keep text legible */}
       <motion.div
-        className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent to-black opacity-50"
+        className="absolute inset-0 z-20 bg-gradient-to-b from-black/15 via-black/45 to-black/85 backdrop-blur-[1px]"
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.5 }}
-        transition={{ duration: 1.2 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true }}
       />
 
       {/* Floating color mist effect */}
       <motion.div
-        className="absolute w-[120%] h-[120%] -z-20 blur-3xl bg-gradient-to-tr from-green-400/10 via-blue-500/10 to-purple-600/10 animate-pulse"
+        className="absolute inset-[-10%] z-10 h-[120%] w-[120%] animate-pulse bg-gradient-to-tr from-green-400/12 via-blue-500/12 to-purple-600/12 blur-3xl"
         initial={{ scale: 1 }}
-        animate={{ scale: [1, 1.05, 1], opacity: [0.25, 0.4, 0.25] }}
+        animate={{ scale: [1, 1.05, 1], opacity: [0.25, 0.45, 0.25] }}
         transition={{ duration: 6, repeat: Infinity }}
+        aria-hidden="true"
       />
+
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="z-30 max-w-3xl"
+      >
+        <h2 className="mb-6 text-4xl font-bold text-white drop-shadow-[0_0_20px_rgba(0,255,128,0.25)] md:text-6xl">
+          {title}
+        </h2>
+        <p className="whitespace-pre-line text-lg leading-relaxed text-gray-200 md:text-xl">
+          {text}
+        </p>
+      </motion.div>
     </section>
   );
 }

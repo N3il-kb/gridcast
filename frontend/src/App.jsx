@@ -18,6 +18,7 @@ In essence, datacenters are the factories of the digital era — the invisible e
 Every AI model, from ChatGPT to diffusion image generators, consumes immense processing power.
 As models scale, so does the demand for electricity, cooling, and physical infrastructure.
 By 2030, AI workloads could account for up to 10% of global electricity demand.`,
+    background: "/images/ai-datacenter.jpg",
   },
   {
     id: "energy",

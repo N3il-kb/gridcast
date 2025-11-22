@@ -12,6 +12,9 @@ from typing import Dict, Iterable, List, Mapping, Optional, Tuple
 
 import pandas as pd
 import requests
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Region centroids for weather lookups
 REGION_COORDS: Dict[str, Tuple[float, float]] = {
@@ -87,9 +90,9 @@ def fetch_latest_fuel_mix(region: str) -> Tuple[Optional[pd.Timestamp], Dict[str
                 "frequency": "hourly",
                 "start": start.strftime("%Y-%m-%dT%H"),
                 "end": end.strftime("%Y-%m-%dT%H"),
-                "sort[0][column]": "period",
                 "sort[0][direction]": "desc",
                 "length": 500,
+                "data[0]": "value",
             },
         )
         df = pd.DataFrame(data)
@@ -104,7 +107,8 @@ def fetch_latest_fuel_mix(region: str) -> Tuple[Optional[pd.Timestamp], Dict[str
         df_latest = df[df["period"] == latest_ts]
         mix = df_latest.groupby("fueltype")["value"].sum().to_dict()
         return latest_ts, {k: float(v) for k, v in mix.items()}
-    except Exception:
+    except Exception as e:
+        print(f"Error fetching fuel mix for {region}: {e}")
         return None, {}
 
 
@@ -120,9 +124,9 @@ def fetch_demand_series(region: str, days: int = 30) -> Optional[pd.DataFrame]:
                 "frequency": "hourly",
                 "start": start.strftime("%Y-%m-%dT%H"),
                 "end": end.strftime("%Y-%m-%dT%H"),
-                "sort[0][column]": "period",
                 "sort[0][direction]": "asc",
                 "length": 5000,
+                "data[0]": "value",
             },
         )
         df = pd.DataFrame(data)
@@ -134,7 +138,8 @@ def fetch_demand_series(region: str, days: int = 30) -> Optional[pd.DataFrame]:
         if df.empty:
             return None
         return df[["period", "value"]].sort_values("period").reset_index(drop=True)
-    except Exception:
+    except Exception as e:
+        print(f"Error fetching demand for {region}: {e}")
         return None
 
 
@@ -152,9 +157,9 @@ def fetch_latest_price(region: str) -> Tuple[Optional[pd.Timestamp], Optional[fl
                 "frequency": "hourly",
                 "start": start.strftime("%Y-%m-%dT%H"),
                 "end": end.strftime("%Y-%m-%dT%H"),
-                "sort[0][column]": "period",
                 "sort[0][direction]": "desc",
                 "length": 50,
+                "data[0]": "value",
             },
         )
         if not data:
@@ -170,7 +175,8 @@ def fetch_latest_price(region: str) -> Tuple[Optional[pd.Timestamp], Optional[fl
             return None, None
         latest = df.sort_values("period").iloc[-1]
         return latest["period"], float(latest[value_field])
-    except Exception:
+    except Exception as e:
+        print(f"Error fetching price for {region}: {e}")
         return None, None
 
 
@@ -195,7 +201,8 @@ def fetch_temperature(lat: float, lon: float) -> Optional[float]:
         if "temperature" in current:
             return float(current["temperature"])
         return None
-    except Exception:
+    except Exception as e:
+        print(f"Error fetching temperature for {lat},{lon}: {e}")
         return None
 
 

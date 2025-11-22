@@ -31,7 +31,7 @@ export default function Navbar() {
               href="#"
               className="transition hover:text-white hover:drop-shadow-[0_0_6px_rgba(0,255,128,0.6)]"
             >
-              About
+              Impacts
             </a>
           </li>
           <li>

@@ -90,7 +90,7 @@ export default function App() {
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
             <a
               href="/hex_map.html"
-              className="px-10 py-4 rounded-full bg-neon text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
+              className="px-10 py-4 rounded-full bg-white text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
             >
               Launch Dashboard
             </a>
@@ -188,7 +188,7 @@ function SplitSection({ id, title, text, background, showLaunchButton, index }) 
             <div className="mt-10">
               <a
                 href="/hex_map.html"
-                className="inline-block px-8 py-3 rounded-full bg-neon text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
+                className="inline-block px-8 py-3 rounded-full bg-white text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
               >
                 Launch Dashboard
               </a>
@@ -264,7 +264,7 @@ function FullScreenSection({ title, text, background, showLaunchButton }) {
           <div className="mt-10 flex justify-center">
             <a
               href="/hex_map.html"
-              className="px-10 py-4 rounded-full bg-neon text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
+              className="px-10 py-4 rounded-full bg-white text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
             >
               Launch Dashboard
             </a>

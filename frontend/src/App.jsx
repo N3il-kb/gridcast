@@ -13,39 +13,45 @@ In essence, datacenters are the factories of the digital era — the invisible e
   },
   {
     id: "future",
-    title: "Why Datacenters Matter for the Future — and AI",
-    text: `The future of AI depends on compute — and compute lives in datacenters.
-Every AI model, from ChatGPT to diffusion image generators, consumes immense processing power.
-As models scale, so does the demand for electricity, cooling, and physical infrastructure.
-By 2030, AI workloads could account for up to 10% of global electricity demand.`,
-    background: "/images/ai-datacenter.jpg",
+    title: "Energy concerns of data centers",
+    text: `Artificial intelligence is revolutionizing every industry from healthcare to finance, and its growth shows no signs of slowing. 
+    But behind every query and every AI model training session lies massive computational infrastructure. Data centers currently consume 1-2% of global electricity, 
+    and with AI's explosive growth, that number is skyrocketing.The energy used to power these data centers must be monitored and optimized to fit our needs as businesses and as people. 
+    As AI becomes more integrated into our daily lives, we're facing a critical question: how do we fuel this technological revolution without accelerating the climate crisis?
+`,
+    background: "/images/coal-bg.jpg",
   },
   {
     id: "energy",
-    title: "Why They Use So Much Energy",
-    text: `Datacenters must stay online 24/7. Servers generate heat, which demands powerful cooling systems.
-Electricity keeps everything running — from GPUs crunching numbers to chillers keeping them alive.
-The result: a constant tug-of-war between performance and sustainability.`,
+    title: "What are sustainable data centers",
+    text: `“Sustainable data centers are facilities designed to minimize environmental impact while maintaining high computing performance. 
+    These facilities achieve efficiency through renewable energy sources, optimized cooling systems with low PUE ratings, water conservation, and circular economy practices like hardware recycling.
+    The best sustainable data centers can operate on 100% renewable energy with PUE scores below 1.15, compared to the industry average of 1.58.`,
+    background: "/images/sustainable_datacenter.jpg",
   },
   {
     id: "score",
     title: "Introducing the Datacenter Score",
-    text: `Not all datacenters are created equal.
-GridCast introduces the Datacenter Score — a composite metric that measures both profitability and sustainability.
-It combines local energy costs, renewable energy share, and regional efficiency to give a clear, data-driven rating of each site.`,
+    text: `GridScore.
+To measure the concerns of this growing industry, we developed GridScore—a comprehensive dual-framework that evaluates data centers on both ESG performance and profitability using a 60/40 weighting system.
+The ESG component (60%) measures environmental factors like energy efficiency and renewable usage, social factors like worker safety and community impact, and governance factors like transparency and cybersecurity. 
+The profitability component (40%) assesses operational efficiency, revenue quality, capital efficiency, and market position, ensuring that sustainable facilities are also financially viable.`,
+    background: "/images/hex-bg.jpg",
   },
   {
     id: "sustainability",
     title: "Sustainability and Custom Scores",
     text: `Every company can define its own sustainability priorities — whether minimizing carbon footprint, maximizing uptime, or balancing both.
 GridCast allows you to create a Custom Sustainability Score, blending renewable energy intensity, carbon cost, and operational metrics unique to your datacenter.`,
+    background: "/images/sustainability-bg.jpg",
   },
   {
     id: "gridcast",
     title: "What Is GridCast?",
-    text: `GridCast is an intelligent forecasting and analytics platform for the data-driven energy era.
-We predict energy demand, score datacenter sustainability, and visualize grid efficiency across regions — helping businesses make smarter, greener infrastructure decisions.
-Whether you’re an AI company siting your next facility or an analyst evaluating carbon impact, GridCast bridges the gap between performance and planet.`,
+    text: `Our mission is to use data to provide this information on how and where to build the perfect data center. We believe there is a smarter and better way to ride the wave of AI without harming the planet in the process. 
+    Welcome to GridCast.`,
+    background: "/images/hex-gr-bg.avif",
+    showLaunchButton: true,
   },
 ];
 
@@ -74,19 +80,22 @@ export default function App() {
         <div className="relative z-10 flex w-full max-w-5xl flex-1 flex-col items-center justify-center text-center">
           <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white drop-shadow-[0_0_15px_rgba(0,255,128,0.25)] mt-36">
             ⚡️GridCast
-          </h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/80 sm:text-xl">
-            Forecasting the energy of tomorrow, today.
-          </p>
+      </h1>
+      <p className="mt-4 max-w-2xl text-lg text-white/80 sm:text-xl">
+        Forecasting the energy of tomorrow, today.
+      </p>
 
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <button className="px-8 py-3 rounded-full border border-white/60 bg-white text-black font-semibold hover:bg-green-400/20 hover:text-white transition-all">
-              Launch Dashboard
-            </button>
-            <button className="px-8 py-3 rounded-full border border-white/20 bg-white/5 text-white/80 font-medium hover:bg-white/10 transition-all">
-              Learn More
-            </button>
-          </div>
+      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+        <a
+          href="/hex_map.html"
+          className="px-8 py-3 rounded-full border border-white/60 bg-white text-black font-semibold hover:bg-green-400/20 hover:text-white transition-all text-center"
+        >
+          Launch Dashboard
+        </a>
+        <button className="px-8 py-3 rounded-full border border-white/20 bg-white/5 text-white/80 font-medium hover:bg-white/10 transition-all">
+          Learn More
+        </button>
+      </div>
         </div>
 
         <div className="relative z-10 mt-12 w-full max-w-6xl text-center">
@@ -126,7 +135,7 @@ function FeatureCard({ title, text }) {
   );
 }
 
-function FullScreenSection({ title, text, background }) {
+function FullScreenSection({ title, text, background, showLaunchButton }) {
   return (
     <section className="relative isolate flex h-screen items-center justify-center overflow-hidden px-6 text-center md:px-24">
       {background ? (
@@ -174,6 +183,16 @@ function FullScreenSection({ title, text, background }) {
         <p className="whitespace-pre-line text-lg leading-relaxed text-gray-200 md:text-xl">
           {text}
         </p>
+        {showLaunchButton && (
+          <div className="mt-8 flex justify-center">
+            <a
+              href="/hex_map.html"
+              className="px-8 py-3 rounded-full border border-white/60 bg-white text-black font-semibold hover:bg-green-400/20 hover:text-white transition-all"
+            >
+              Launch Dashboard
+            </a>
+          </div>
+        )}
       </motion.div>
     </section>
   );

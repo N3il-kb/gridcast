@@ -24,7 +24,7 @@ In essence, datacenters are the factories of the digital era — the invisible e
   {
     id: "energy",
     title: "What are sustainable data centers",
-    text: `“Sustainable data centers are facilities designed to minimize environmental impact while maintaining high computing performance. 
+    text: `Sustainable data centers are facilities designed to minimize environmental impact while maintaining high computing performance. 
     These facilities achieve efficiency through renewable energy sources, optimized cooling systems with low PUE ratings, water conservation, and circular economy practices like hardware recycling.
     The best sustainable data centers can operate on 100% renewable energy with PUE scores below 1.15, compared to the industry average of 1.58.`,
     background: "/images/sustainable_datacenter.jpg",
@@ -32,9 +32,9 @@ In essence, datacenters are the factories of the digital era — the invisible e
   {
     id: "score",
     title: "Introducing the Datacenter Score",
-    text: `GridScore.
-To measure the concerns of this growing industry, we developed GridScore—a comprehensive dual-framework that evaluates data centers on both ESG performance and profitability using a 60/40 weighting system.
-The ESG component (60%) measures environmental factors like energy efficiency and renewable usage, social factors like worker safety and community impact, and governance factors like transparency and cybersecurity. 
+    text: `or GridScore.
+
+To measure the concerns of this growing industry, we developed GridScore—a comprehensive dual-framework that evaluates data centers on both ESG performance and profitability using a 60/40 weighting system. The ESG component (60%) measures environmental factors like energy efficiency and renewable usage, social factors like worker safety and community impact, and governance factors like transparency and cybersecurity. 
 The profitability component (40%) assesses operational efficiency, revenue quality, capital efficiency, and market position, ensuring that sustainable facilities are also financially viable.`,
     background: "/images/hex-bg.jpg",
   },
@@ -57,15 +57,15 @@ GridCast allows you to create a Custom Sustainability Score, blending renewable 
 
 export default function App() {
   return (
-    <main className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-x-hidden bg-black text-white">
+    <main className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-x-hidden bg-dark-bg text-white">
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative isolate z-10 flex min-h-[100vh] w-full flex-col items-center overflow-hidden px-4 pb-10">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative isolate z-10 flex min-h-[100vh] w-full flex-col items-center px-4 pb-32">
+        <div className="absolute top-0 left-0 right-0 -bottom-31 -z-10">
           <Dither
-            className="pointer-events-none"
+            className="pointer-events-none h-full w-full"
             waveColor={[0.5, 0.7, 0.5]}
             disableAnimation={false}
             enableMouseInteraction={false}
@@ -75,63 +75,149 @@ export default function App() {
             waveFrequency={0}
             waveSpeed={0.01}
           />
+          {/* Gradient Fade */}
+          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent to-dark-bg pointer-events-none" />
         </div>
 
         <div className="relative z-10 flex w-full max-w-5xl flex-1 flex-col items-center justify-center text-center">
-          <h1 className="text-5xl sm:text-7xl font-extrabold tracking-tight text-white drop-shadow-[0_0_15px_rgba(0,255,128,0.25)] mt-36">
+          <h1 className="text-5xl sm:text-8xl font-bold tracking-tighter text-white drop-shadow-[0_0_30px_rgba(0,255,128,0.3)] mt-36">
             ⚡️GridCast
-      </h1>
-      <p className="mt-4 max-w-2xl text-lg text-white/80 sm:text-xl">
-        Forecasting the energy of tomorrow, today.
-      </p>
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-white/80 sm:text-xl">
+            Forecasting the energy of tomorrow, today.
+          </p>
 
-      <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-        <a
-          href="/hex_map.html"
-          className="px-8 py-3 rounded-full border border-white/60 bg-white text-black font-semibold hover:bg-green-400/20 hover:text-white transition-all text-center"
-        >
-          Launch Dashboard
-        </a>
-        <button className="px-8 py-3 rounded-full border border-white/20 bg-white/5 text-white/80 font-medium hover:bg-white/10 transition-all">
-          Learn More
-        </button>
-      </div>
+          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
+            <a
+              href="/hex_map.html"
+              className="px-10 py-4 rounded-full bg-neon text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
+            >
+              Launch Dashboard
+            </a>
+            <span className="text-white/40 italic font-serif text-lg">or</span>
+            <a
+              href="#datacenters"
+              className="px-10 py-4 rounded-full border border-white/20 bg-glass text-white font-medium hover:bg-white/10 hover:border-neon/50 transition-all backdrop-blur-sm cursor-pointer"
+            >
+              Learn More
+            </a>
+          </div>
         </div>
 
         <div className="relative z-10 mt-12 w-full max-w-6xl text-center">
           <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-3">
             <FeatureCard
-              title="Real-Time Insights"
-              text="Live data visualizations of regional and national energy grids to stay ahead of market shifts."
+              title="Geographic Insights"
+              text="Interactive maps that reveal how grid conditions vary across regions, making large-scale energy patterns easy to understand."
+              href="/hex_map.html"
             />
             <FeatureCard
-              title="AI Forecasting"
-              text="Powered by advanced ARIMA + neural hybrid models for accurate energy demand predictions."
+              title="How the Model Works"
+              text="A simple overview of the GridCast scoring framework, showing how different factors combine into a single GridScore."
+              href="#score"
             />
             <FeatureCard
               title="Sustainability Index"
               text="Balance profitability and sustainability with our datacenter and ESG scoring models."
+              href="#score"
             />
           </div>
         </div>
       </section>
 
       {/* Presentation Narrative Sections */}
-      <div className="w-full">
+      <div className="w-full flex flex-col gap-0">
         {sections.map((section, i) => (
-          <FullScreenSection key={section.id} {...section} />
+          section.id === "gridcast" ? (
+            <FullScreenSection key={section.id} {...section} />
+          ) : (
+            <SplitSection key={section.id} {...section} index={i} />
+          )
         ))}
       </div>
     </main>
   );
 }
 
-function FeatureCard({ title, text }) {
+function FeatureCard({ title, text, href }) {
+  const Content = (
+    <>
+      <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-neon transition-colors">{title}</h3>
+      <p className="text-white/60 leading-relaxed">{text}</p>
+    </>
+  );
+
+  const className = "group block h-full rounded-2xl bg-glass border border-white/10 p-8 backdrop-blur-md text-center hover:border-neon/50 hover:shadow-[0_0_30px_rgba(0,255,128,0.1)] transition-all duration-500 cursor-pointer";
+
+  if (href) {
+    return (
+      <a href={href} className={className}>
+        {Content}
+      </a>
+    );
+  }
+
   return (
-    <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-md text-center hover:bg-white/10 transition">
-      <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
-      <p className="text-white/70">{text}</p>
+    <div className={className}>
+      {Content}
     </div>
+  );
+}
+
+function SplitSection({ id, title, text, background, showLaunchButton, index }) {
+  const isEven = index % 2 === 0;
+
+  return (
+    <section id={id} className="relative z-20 flex min-h-[80vh] w-full items-center justify-center overflow-hidden px-6 py-24 md:px-24">
+      <div className="container mx-auto grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-24 items-center">
+        {/* Text Column */}
+        <motion.div
+          className={`flex flex-col justify-center ${isEven ? "md:order-1" : "md:order-2"}`}
+          initial={{ opacity: 0, x: isEven ? -50 : 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <h2 className="mb-6 text-4xl font-bold text-white md:text-5xl leading-tight">
+            {title}
+          </h2>
+          <p className="whitespace-pre-line text-lg leading-relaxed text-gray-400 md:text-xl">
+            {text}
+          </p>
+          {showLaunchButton && (
+            <div className="mt-10">
+              <a
+                href="/hex_map.html"
+                className="inline-block px-8 py-3 rounded-full bg-neon text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
+              >
+                Launch Dashboard
+              </a>
+            </div>
+          )}
+        </motion.div>
+
+        {/* Image Card Column */}
+        <motion.div
+          className={`relative ${isEven ? "md:order-2" : "md:order-1"}`}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
+            <div className="aspect-[4/3] w-full overflow-hidden">
+              <img
+                src={background}
+                alt={title}
+                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+            </div>
+            {/* Overlay gradient for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+          </div>
+        </motion.div>
+      </div>
+    </section>
   );
 }
 
@@ -161,15 +247,6 @@ function FullScreenSection({ title, text, background, showLaunchButton }) {
         viewport={{ once: true }}
       />
 
-      {/* Floating color mist effect */}
-      <motion.div
-        className="absolute inset-[-10%] z-10 h-[120%] w-[120%] animate-pulse bg-gradient-to-tr from-green-400/12 via-blue-500/12 to-purple-600/12 blur-3xl"
-        initial={{ scale: 1 }}
-        animate={{ scale: [1, 1.05, 1], opacity: [0.25, 0.45, 0.25] }}
-        transition={{ duration: 6, repeat: Infinity }}
-        aria-hidden="true"
-      />
-
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -177,17 +254,17 @@ function FullScreenSection({ title, text, background, showLaunchButton }) {
         viewport={{ once: true }}
         className="z-30 max-w-3xl"
       >
-        <h2 className="mb-6 text-4xl font-bold text-white drop-shadow-[0_0_20px_rgba(0,255,128,0.25)] md:text-6xl">
+        <h2 className="mb-6 text-5xl font-bold text-white drop-shadow-[0_0_20px_rgba(0,255,128,0.25)] md:text-7xl tracking-tight">
           {title}
         </h2>
         <p className="whitespace-pre-line text-lg leading-relaxed text-gray-200 md:text-xl">
           {text}
         </p>
         {showLaunchButton && (
-          <div className="mt-8 flex justify-center">
+          <div className="mt-10 flex justify-center">
             <a
               href="/hex_map.html"
-              className="px-8 py-3 rounded-full border border-white/60 bg-white text-black font-semibold hover:bg-green-400/20 hover:text-white transition-all"
+              className="px-10 py-4 rounded-full bg-neon text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
             >
               Launch Dashboard
             </a>

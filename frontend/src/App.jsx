@@ -9,7 +9,7 @@ const sections = [
     text: `Every search, every AI query, every cloud upload — they all run through datacenters.
 These massive facilities house thousands of servers that process, store, and transmit data around the clock.
 In essence, datacenters are the factories of the digital era — the invisible engines powering everything from Netflix to GPT.`,
-    background: "/images/datacenter-bg.jpg",
+    background: "/gridcast/images/datacenter-bg.jpg",
   },
   {
     id: "future",
@@ -19,7 +19,7 @@ In essence, datacenters are the factories of the digital era — the invisible e
     and with AI's explosive growth, that number is skyrocketing.The energy used to power these data centers must be monitored and optimized to fit our needs as businesses and as people. 
     As AI becomes more integrated into our daily lives, we're facing a critical question: how do we fuel this technological revolution without accelerating the climate crisis?
 `,
-    background: "/images/coal-bg.jpg",
+    background: "/gridcast/images/coal-bg.jpg",
   },
   {
     id: "energy",
@@ -27,7 +27,7 @@ In essence, datacenters are the factories of the digital era — the invisible e
     text: `Sustainable data centers are facilities designed to minimize environmental impact while maintaining high computing performance. 
     These facilities achieve efficiency through renewable energy sources, optimized cooling systems with low PUE ratings, water conservation, and circular economy practices like hardware recycling.
     The best sustainable data centers can operate on 100% renewable energy with PUE scores below 1.15, compared to the industry average of 1.58.`,
-    background: "/images/sustainable_datacenter.jpg",
+    background: "/gridcast/images/sustainable_datacenter.jpg",
   },
   {
     id: "score",
@@ -36,21 +36,21 @@ In essence, datacenters are the factories of the digital era — the invisible e
 
 To measure the concerns of this growing industry, we developed GridScore—a comprehensive dual-framework that evaluates data centers on both ESG performance and profitability using a 60/40 weighting system. The ESG component (60%) measures environmental factors like energy efficiency and renewable usage, social factors like worker safety and community impact, and governance factors like transparency and cybersecurity. 
 The profitability component (40%) assesses operational efficiency, revenue quality, capital efficiency, and market position, ensuring that sustainable facilities are also financially viable.`,
-    background: "/images/hex-bg.jpg",
+    background: "/gridcast/images/hex-bg.jpg",
   },
   {
     id: "sustainability",
     title: "Sustainability and Custom Scores",
     text: `Every company can define its own sustainability priorities — whether minimizing carbon footprint, maximizing uptime, or balancing both.
 GridCast allows you to create a Custom Sustainability Score, blending renewable energy intensity, carbon cost, and operational metrics unique to your datacenter.`,
-    background: "/images/sustainability-bg.jpg",
+    background: "/gridcast/images/sustainability-bg.jpg",
   },
   {
     id: "gridcast",
     title: "What Is GridCast?",
     text: `Our mission is to use data to provide this information on how and where to build the perfect data center. We believe there is a smarter and better way to ride the wave of AI without harming the planet in the process. 
     Welcome to GridCast.`,
-    background: "/images/hex-gr-bg.avif",
+    background: "/gridcast/images/hex-gr-bg.avif",
     showLaunchButton: true,
   },
 ];
@@ -89,7 +89,7 @@ export default function App() {
 
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
             <a
-              href="/hex_map.html"
+              href="/gridcast/hex_map.html"
               className="px-10 py-4 rounded-full bg-white text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
             >
               Launch Dashboard
@@ -109,7 +109,7 @@ export default function App() {
             <FeatureCard
               title="Geographic Insights"
               text="Interactive maps that reveal how grid conditions vary across regions, making large-scale energy patterns easy to understand."
-              href="/hex_map.html"
+              href="/gridcast/hex_map.html"
             />
             <FeatureCard
               title="How the Model Works"
@@ -187,7 +187,7 @@ function SplitSection({ id, title, text, background, showLaunchButton, index }) 
           {showLaunchButton && (
             <div className="mt-10">
               <a
-                href="/hex_map.html"
+                href="/gridcast/hex_map.html"
                 className="inline-block px-8 py-3 rounded-full bg-white text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
               >
                 Launch Dashboard
@@ -263,7 +263,7 @@ function FullScreenSection({ title, text, background, showLaunchButton }) {
         {showLaunchButton && (
           <div className="mt-10 flex justify-center">
             <a
-              href="/hex_map.html"
+              href="/gridcast/hex_map.html"
               className="px-10 py-4 rounded-full bg-white text-black font-bold text-lg hover:bg-white hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,255,128,0.4)]"
             >
               Launch Dashboard

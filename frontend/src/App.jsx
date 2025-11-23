@@ -5,28 +5,23 @@ import Navbar from "@/components/Navbar";
 const sections = [
   {
     id: "datacenters",
-    title: "What Are Datacenters?",
-    text: `Every search, every AI query, every cloud upload — they all run through datacenters.
-These massive facilities house thousands of servers that process, store, and transmit data around the clock.
-In essence, datacenters are the factories of the digital era — the invisible engines powering everything from Netflix to GPT.`,
+    title: "What Are Data Centers?",
+    text: `Every search, every AI query, every cloud upload — they all run through datacenters. These massive facilities house thousands of servers that process, store, and transmit data around the clock.
+In essence, datacenters are the factories of the digital world — and in the age of AI they have become even more important.`,
     background: "/gridcast/images/datacenter-bg.jpg",
   },
   {
     id: "future",
-    title: "Energy concerns of data centers",
+    title: "Energy Concerns of Data Centers",
     text: `Artificial intelligence is revolutionizing every industry from healthcare to finance, and its growth shows no signs of slowing. 
-    But behind every query and every AI model training session lies massive computational infrastructure. Data centers currently consume 1-2% of global electricity, 
-    and with AI's explosive growth, that number is skyrocketing.The energy used to power these data centers must be monitored and optimized to fit our needs as businesses and as people. 
-    As AI becomes more integrated into our daily lives, we're facing a critical question: how do we fuel this technological revolution without accelerating the climate crisis?
+    But behind every query and every AI model training session lies massive computational infrastructure. Data centers currently consume 1-2% of global electricity, and with AI's explosive growth, that number is skyrocketing.The energy used to power these data centers must be monitored and optimized to fit our needs as businesses and as people. As AI becomes more integrated into our daily lives, we're facing a critical question: how do we fuel this technological revolution without accelerating the climate crisis?
 `,
     background: "/gridcast/images/coal-bg.jpg",
   },
   {
     id: "energy",
-    title: "What are sustainable data centers",
-    text: `Sustainable data centers are facilities designed to minimize environmental impact while maintaining high computing performance. 
-    These facilities achieve efficiency through renewable energy sources, optimized cooling systems with low PUE ratings, water conservation, and circular economy practices like hardware recycling.
-    The best sustainable data centers can operate on 100% renewable energy with PUE scores below 1.15, compared to the industry average of 1.58.`,
+    title: "The Solution: Sustainable Data Centers",
+    text: `Sustainable data centers are facilities designed to minimize environmental impact while maintaining high computing performance. These facilities achieve efficiency through renewable energy sources, optimized cooling systems with low PUE ratings, and water conservation techniques. The best sustainable data centers can operate on 100% renewable energy with PUE scores below 1.15, compared to the industry average of 1.58.`,
     background: "/gridcast/images/sustainable_datacenter.jpg",
   },
   {
@@ -34,21 +29,15 @@ In essence, datacenters are the factories of the digital era — the invisible e
     title: "Introducing the Datacenter Score",
     text: `or GridScore.
 
-To measure the concerns of this growing industry, we developed GridScore—a comprehensive dual-framework that evaluates data centers on both ESG performance and profitability using a 60/40 weighting system. The ESG component (60%) measures environmental factors like energy efficiency and renewable usage, social factors like worker safety and community impact, and governance factors like transparency and cybersecurity. 
-The profitability component (40%) assesses operational efficiency, revenue quality, capital efficiency, and market position, ensuring that sustainable facilities are also financially viable.`,
+To measure the concerns of this growing industry, we developed GridScore. A comprehensive dual-framework, it evaluates data centers on both ESG performance and profitability using a 60/40 weighting system. The ESG component (60%) measures environmental factors like energy efficiency and renewable usage. 
+The profitability component (40%) assesses operational efficiency, and computation per energy used, ensuring that sustainable facilities are also financially viable.`,
     background: "/gridcast/images/hex-bg.jpg",
-  },
-  {
-    id: "sustainability",
-    title: "Sustainability and Custom Scores",
-    text: `Every company can define its own sustainability priorities — whether minimizing carbon footprint, maximizing uptime, or balancing both.
-GridCast allows you to create a Custom Sustainability Score, blending renewable energy intensity, carbon cost, and operational metrics unique to your datacenter.`,
-    background: "/gridcast/images/sustainability-bg.jpg",
   },
   {
     id: "gridcast",
     title: "What Is GridCast?",
-    text: `Our mission is to use data to provide this information on how and where to build the perfect data center. We believe there is a smarter and better way to ride the wave of AI without harming the planet in the process. 
+    text: `Our mission is to use data to provide this information on how and where to build the perfect data center. We believe there is a smarter and better way to ride the wave of AI without harming the planet in the process.
+    
     Welcome to GridCast.`,
     background: "/gridcast/images/hex-gr-bg.avif",
     showLaunchButton: true,
@@ -104,20 +93,23 @@ export default function App() {
           </div>
         </div>
 
-        <div className="relative z-10 mt-12 w-full max-w-6xl text-center">
+        <div className="relative z-10 mt-12 w-full max-w-5xl text-center">
           <div className="grid w-full grid-cols-1 gap-6 sm:grid-cols-3">
+
+            <FeatureCard
+              title="A sustainable future"
+              text="The importance of sustainable data centers in the age of AI and cloud computing."
+              href="#energy"
+            />
+
             <FeatureCard
               title="Geographic Insights"
-              text="Interactive maps that reveal how grid conditions vary across regions, making large-scale energy patterns easy to understand."
-              href="/gridcast/hex_map.html"
+              text="An interactive map that reveal how grid conditions vary across regions, making large-scale energy patterns easy to understand."
+              href="#page-bottom"
             />
+
             <FeatureCard
-              title="How the Model Works"
-              text="A simple overview of the GridCast scoring framework, showing how different factors combine into a single GridScore."
-              href="#score"
-            />
-            <FeatureCard
-              title="Sustainability Index"
+              title="GridScore Explained"
               text="Balance profitability and sustainability with our datacenter and ESG scoring models."
               href="#score"
             />
@@ -135,6 +127,7 @@ export default function App() {
           )
         ))}
       </div>
+      <div id="page-bottom" className="h-px w-full" />
     </main>
   );
 }

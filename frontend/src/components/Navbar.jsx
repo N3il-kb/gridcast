@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <header className="fixed top-6 left-1/2 z-50 -translate-x-1/2 w-full max-w-5xl px-4">
+    <header className="fixed top-6 left-1/2 z-50 -translate-x-1/2 w-full max-w-2xl px-4">
       <nav className="flex items-center justify-between gap-8 rounded-full border border-white/10 bg-glass px-8 py-4 shadow-[0_0_30px_rgba(0,255,128,0.15)] backdrop-blur-xl">
         {/* Logo + Title */}
         <div className="flex items-center gap-2">
@@ -20,7 +20,7 @@ export default function Navbar() {
         <ul className="flex items-center gap-6 text-sm text-white/70">
           <li>
             <a
-              href="/hex_map.html"
+              href="/gridcast/hex_map.html"
               className="transition hover:text-neon hover:drop-shadow-[0_0_8px_rgba(0,255,128,0.6)] font-medium"
             >
               Dashboard
@@ -28,10 +28,10 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href="#"
+              href="#datacenters"
               className="transition hover:text-neon hover:drop-shadow-[0_0_8px_rgba(0,255,128,0.6)] font-medium"
             >
-              Contact
+              More Info
             </a>
           </li>
         </ul>

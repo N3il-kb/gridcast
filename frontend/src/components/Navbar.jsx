@@ -34,6 +34,15 @@ export default function Navbar() {
               More Info
             </a>
           </li>
+
+          <li>
+            <a
+              href="/gridcast/contact"
+              className="transition hover:text-neon hover:drop-shadow-[0_0_8px_rgba(0,255,128,0.6)] font-medium"
+            >
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

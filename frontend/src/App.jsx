@@ -45,6 +45,14 @@ The profitability component (40%) assesses operational efficiency, and computati
 ];
 
 export default function App() {
+  const isContactPage =
+    typeof window !== "undefined" &&
+    window.location.pathname.toLowerCase().includes("contact");
+
+  if (isContactPage) {
+    return <ContactPage />;
+  }
+
   return (
     <main className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-x-hidden bg-dark-bg text-white">
       {/* Navbar */}
@@ -128,6 +136,64 @@ export default function App() {
         ))}
       </div>
       <div id="page-bottom" className="h-px w-full" />
+    </main>
+  );
+}
+
+function ContactPage() {
+  return (
+    <main className="relative flex min-h-screen w-full flex-col items-center justify-start overflow-x-hidden bg-dark-bg text-white">
+      <section className="relative isolate z-10 flex min-h-screen w-full items-center px-6 py-24">
+        <div className="absolute inset-0 -z-10">
+          <Dither
+            className="pointer-events-none h-full w-full"
+            waveColor={[0.5, 0.7, 0.5]}
+            disableAnimation={false}
+            enableMouseInteraction={false}
+            mouseRadius={0.3}
+            colorNum={6.7}
+            waveAmplitude={0}
+            waveFrequency={0}
+            waveSpeed={0.01}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-b from-transparent to-dark-bg pointer-events-none" />
+        </div>
+
+        <div className="relative z-10 w-full max-w-7xl">
+  <div className="grid gap-12 md:grid-cols-[2fr_0.8fr] md:items-center">
+    
+    {/* LEFT COLUMN: Added items-center and text-center */}
+    <div className="flex flex-col gap-4 items-center text-center">
+      <h1 className="text-5xl sm:text-8xl font-bold tracking-tighter text-white drop-shadow-[0_0_30px_rgba(0,255,128,0.3)]">
+        ⚡️GridCast
+      </h1>
+      <p className="max-w-2xl text-lg text-white/80 sm:text-xl">
+        Forecasting the energy of tomorrow, today.
+      </p>
+    </div>
+
+    {/* RIGHT COLUMN: Changed to items-center */}
+    <div className="flex flex-col items-center gap-4"> 
+      {/* Removed md:self-end from the div below */}
+      <div className="flex h-56 w-56 items-center justify-center rounded-2xl border border-white/15 bg-white/5 text-white/60 backdrop-blur-sm">
+          <img
+        src="/gridcast/images/qr.png"
+        alt="Contact QR Code"
+        className="h-full w-full object-contain p-2"
+      />
+      </div>
+      {/* Removed md:self-end from the anchor below */}
+      <a
+        href="#"
+        className="text-3xl text-neon hover:text-white transition-colors underline decoration-neon/50 decoration-2 underline-offset-4"
+      >
+        n3il-kb.github.io/gridcast/
+      </a>
+    </div>
+    
+  </div>
+</div>
+      </section> 
     </main>
   );
 }

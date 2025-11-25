@@ -31,7 +31,7 @@ In essence, datacenters are the factories of the digital world — and in the ag
 
 To measure the concerns of this growing industry, we developed GridScore. A comprehensive dual-framework, it evaluates data centers on both ESG performance and profitability using a 60/40 weighting system. The ESG component (60%) measures environmental factors like energy efficiency and renewable usage. 
 The profitability component (40%) assesses operational efficiency, and computation per energy used, ensuring that sustainable facilities are also financially viable.`,
-    background: "/gridcast/images/hex-bg.jpg",
+    background: "/gridcast/images/scoring_breakdown.png",
   },
   {
     id: "gridcast",

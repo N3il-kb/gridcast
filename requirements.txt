@@ -10,3 +10,4 @@ matplotlib
 prophet
 folium
 scikit-learn
+python-dotenv

@@ -782,8 +782,8 @@ const COMPARE_METRICS = [
   { label: "GridScore", key: "dc_score", digits: 3 },
   { label: "Sustainability", key: "sustainability", digits: 3 },
   { label: "Profitability", key: "profitability", digits: 3 },
-  { label: "Cooling Advantage", key: "dc_score_temp", digits: 3 },
-  { label: "Cooling Boost", key: "temp_cool_score", digits: 3 },
+  { label: "Cooling Score", key: "dc_score_temp", digits: 3 },
+  { label: "Renewable Energy", key: "raw_renew", digits: 1, suffix: "%" },
   { label: "Local Temp (°C)", key: "local_temp_c", digits: 1 },
   { label: "Elevation (m)", key: "elevation_m", digits: 0 },
   { label: "Dist. to Region", key: "dist_to_region", digits: 0 },
@@ -829,7 +829,7 @@ function ComparePanel({ hexA, hexB, onClose }) {
         {hexA && !hexB && (
           <p className="pb-1 text-xs text-white/40">Select a second hex to compare</p>
         )}
-        {COMPARE_METRICS.map(({ label, key, digits }) => {
+        {COMPARE_METRICS.map(({ label, key, digits, suffix }) => {
           const vA = propsA[key] != null ? Number(propsA[key]) : null;
           const vB = propsB[key] != null ? Number(propsB[key]) : null;
           const diff = vA != null && vB != null ? vA - vB : null;
@@ -837,12 +837,12 @@ function ComparePanel({ hexA, hexB, onClose }) {
           const fmtNum = (v) => {
             if (v == null || !Number.isFinite(v)) return "—";
             if (key === "dist_to_region") return `${Math.round(v / 1000)} km`;
-            return d3.format(`.${digits}f`)(v);
+            return d3.format(`.${digits}f`)(v) + (suffix ?? "");
           };
 
           const diffStr =
             diff != null && Number.isFinite(diff)
-              ? (diff >= 0 ? "+" : "") + d3.format(key === "dist_to_region" ? ".0f" : `.${digits}f`)(key === "dist_to_region" ? diff / 1000 : diff) + (key === "dist_to_region" ? " km" : "")
+              ? (diff >= 0 ? "+" : "") + d3.format(key === "dist_to_region" ? ".0f" : `.${digits}f`)(key === "dist_to_region" ? diff / 1000 : diff) + (key === "dist_to_region" ? " km" : (suffix ?? ""))
               : null;
 
           const lowerIsBetter = key === "local_temp_c";

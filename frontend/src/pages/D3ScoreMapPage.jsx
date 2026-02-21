@@ -81,6 +81,10 @@ export default function D3ScoreMapPage() {
   const [error, setError] = useState(null);
   const [features, setFeatures] = useState([]);
   const [mapReady, setMapReady] = useState(false);
+  const [selectedA, setSelectedA] = useState(null);
+  const [selectedB, setSelectedB] = useState(null);
+  const selectedARef = useRef(null);
+  const selectedBRef = useRef(null);
 
   const metricCopy = useMemo(() => METRICS[metric]?.description ?? "", [metric]);
 
@@ -147,6 +151,18 @@ export default function D3ScoreMapPage() {
     // Handle mouse move for tooltip hit detection (on map, not canvas)
     map.on("mousemove", (e) => handleMapMouseMove(e));
     map.on("mouseleave", () => clearHoverRef.current?.());
+    map.on("click", (e) => {
+      const lngLat = e.lngLat;
+      let clicked = null;
+      const nearest = quadtreeRef.current?.find(lngLat.lng, lngLat.lat, 0.8);
+      if (nearest?.[2] && d3.geoContains(nearest[2], [lngLat.lng, lngLat.lat])) {
+        clicked = nearest[2];
+      }
+      if (!clicked) {
+        clicked = visibleFeaturesRef.current.find((f) => d3.geoContains(f, [lngLat.lng, lngLat.lat]));
+      }
+      handleHexClick(clicked);
+    });
 
     return () => {
       mapReadyRef.current = false;
@@ -374,6 +390,42 @@ export default function D3ScoreMapPage() {
       }
     }
 
+    // Selected hex A — cyan highlight
+    const selA = selectedARef.current;
+    if (selA) {
+      const match = visibleFeatures.find((f) => featureId(f) === featureId(selA));
+      if (match) {
+        ctx.save();
+        ctx.beginPath();
+        path(match);
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = "rgba(56,189,248,0.95)";
+        ctx.lineWidth = 2;
+        ctx.shadowColor = "rgba(56,189,248,0.6)";
+        ctx.shadowBlur = 10;
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
+    // Selected hex B — orange highlight
+    const selB = selectedBRef.current;
+    if (selB) {
+      const match = visibleFeatures.find((f) => featureId(f) === featureId(selB));
+      if (match) {
+        ctx.save();
+        ctx.beginPath();
+        path(match);
+        ctx.globalAlpha = 1;
+        ctx.strokeStyle = "rgba(251,146,60,0.95)";
+        ctx.lineWidth = 2;
+        ctx.shadowColor = "rgba(251,146,60,0.6)";
+        ctx.shadowBlur = 10;
+        ctx.stroke();
+        ctx.restore();
+      }
+    }
+
     // Update annotation positions to stay anchored on map
     ANNOTATIONS.forEach((ann) => {
       const el = annotationRefs.current[ann.id];
@@ -436,6 +488,30 @@ export default function D3ScoreMapPage() {
     }
   };
 
+  const handleHexClick = (feature) => {
+    if (!feature) return;
+    const id = featureId(feature);
+    if (featureId(selectedARef.current) === id) {
+      selectedARef.current = null;
+      setSelectedA(null);
+    } else if (featureId(selectedBRef.current) === id) {
+      selectedBRef.current = null;
+      setSelectedB(null);
+    } else if (!selectedARef.current) {
+      selectedARef.current = feature;
+      setSelectedA(feature);
+    } else if (!selectedBRef.current) {
+      selectedBRef.current = feature;
+      setSelectedB(feature);
+    } else {
+      selectedARef.current = selectedBRef.current;
+      setSelectedA(selectedBRef.current);
+      selectedBRef.current = feature;
+      setSelectedB(feature);
+    }
+    render();
+  };
+
   const legendStops = useMemo(() => {
     const [min, max] = domain;
     const palette = palettesRef.current[metric] ?? null;
@@ -449,6 +525,17 @@ export default function D3ScoreMapPage() {
       return { color, offset: Math.round(t * 100) };
     });
   }, [domain, metric]);
+
+  // Trigger Mapbox resize when panel opens/closes (map container width changes)
+  const panelOpen = !!(selectedA || selectedB);
+  useEffect(() => {
+    if (!mapRef.current) return;
+    const timer = setTimeout(() => {
+      mapRef.current?.resize();
+      render();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, [panelOpen]);
 
   // Ensure hover clears when leaving the wrapper (covers embedded contexts)
   useEffect(() => {
@@ -517,11 +604,16 @@ export default function D3ScoreMapPage() {
           </div>
         </div>
 
-        <div
-          ref={wrapperRef}
-          className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0a1320] via-[#08111d] to-[#0e1624] shadow-[0_30px_80px_rgba(0,0,0,0.35)] h-[70vh] min-h-[520px]"
-        >
-          <div ref={mapContainerRef} className="absolute inset-0 h-full w-full" />
+        <div className="flex items-stretch gap-4">
+          <div
+            ref={wrapperRef}
+            className="relative flex-1 min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0a1320] via-[#08111d] to-[#0e1624] shadow-[0_30px_80px_rgba(0,0,0,0.35)] h-[70vh] min-h-[520px]"
+          >
+          <div
+            ref={mapContainerRef}
+            className="absolute inset-0 h-full w-full"
+            style={{ cursor: "pointer" }}
+          />
           <canvas
             ref={canvasRef}
             className="absolute inset-0 h-full w-full pointer-events-none"
@@ -556,9 +648,12 @@ export default function D3ScoreMapPage() {
             ref={tooltipRef}
             className="pointer-events-none absolute left-0 top-0 z-10 hidden min-w-[240px] rounded-2xl border border-white/10 bg-[#0c1622]/95 p-4 text-sm shadow-2xl backdrop-blur-md"
           />
-          {status === "loading" && (
-            <div className="pointer-events-none absolute inset-0 grid place-items-center bg-black/10 text-white/70">
-              Loading grid…
+          {(!mapReady || status === "loading") && (
+            <div className="pointer-events-auto absolute inset-0 z-30 grid place-items-center rounded-2xl bg-[#08111d]/90 backdrop-blur-sm">
+              <div className="flex flex-col items-center gap-3">
+                <div className="h-8 w-8 animate-spin rounded-full border-2 border-white/20 border-t-emerald-400" />
+                <span className="text-sm text-white/60">Loading map…</span>
+              </div>
             </div>
           )}
           {status === "error" && (
@@ -566,7 +661,30 @@ export default function D3ScoreMapPage() {
               {error}
             </div>
           )}
-        </div>
+          </div>{/* end map wrapper */}
+
+          {/* Compare panel — flex sibling */}
+          <div
+            className="flex-shrink-0 h-[70vh] min-h-[520px]"
+            style={{ width: panelOpen ? "288px" : "0px", overflow: "hidden" }}
+          >
+            <div className="w-72 h-full">
+              {(selectedA || selectedB) && (
+                <ComparePanel
+                  hexA={selectedA}
+                  hexB={selectedB}
+                  onClose={() => {
+                    selectedARef.current = null;
+                    selectedBRef.current = null;
+                    setSelectedA(null);
+                    setSelectedB(null);
+                    render();
+                  }}
+                />
+              )}
+            </div>
+          </div>
+        </div>{/* end flex row */}
 
         <div className="flex items-center gap-3 text-sm text-white/70">
           <span className="w-16 text-right font-mono text-xs text-white/60">{formatValue(domain[0])}</span>
@@ -658,4 +776,100 @@ function formatValue(value, digits) {
 
 function legendGradient(stops) {
   return `linear-gradient(to right, ${stops.map((s) => `${s.color} ${s.offset}%`).join(",")})`;
+}
+
+const COMPARE_METRICS = [
+  { label: "GridScore", key: "dc_score", digits: 3 },
+  { label: "Sustainability", key: "sustainability", digits: 3 },
+  { label: "Profitability", key: "profitability", digits: 3 },
+  { label: "Cooling Advantage", key: "dc_score_temp", digits: 3 },
+  { label: "Cooling Boost", key: "temp_cool_score", digits: 3 },
+  { label: "Local Temp (°C)", key: "local_temp_c", digits: 1 },
+  { label: "Elevation (m)", key: "elevation_m", digits: 0 },
+  { label: "Dist. to Region", key: "dist_to_region", digits: 0 },
+];
+
+function ComparePanel({ hexA, hexB, onClose }) {
+  const propsA = hexA?.properties ?? {};
+  const propsB = hexB?.properties ?? {};
+
+  const hexLabel = (props) => {
+    const id = props.hex_id ?? props.id ?? "—";
+    const region = props.region ? ` · ${props.region}` : "";
+    return `#${id}${region}`;
+  };
+
+  return (
+    <div className="h-full w-full rounded-2xl border border-white/10 bg-[#0c1622]/95 p-4 text-sm shadow-2xl backdrop-blur-md overflow-y-auto">
+      {/* Header */}
+      <div className="mb-3 flex items-center justify-between">
+        <span className="text-xs font-semibold uppercase tracking-widest text-white/50">Compare</span>
+        <button
+          onClick={onClose}
+          className="rounded-lg px-2 py-0.5 text-xs text-white/40 transition hover:bg-white/10 hover:text-white/80"
+        >
+          ✕ Clear
+        </button>
+      </div>
+
+      {/* Hex labels */}
+      <div className="mb-3 flex gap-2 text-xs">
+        <div className="flex flex-1 items-center gap-1.5 rounded-xl border border-sky-400/30 bg-sky-400/10 px-2 py-1.5">
+          <span className="h-2 w-2 rounded-full bg-sky-400 shadow-[0_0_6px_rgba(56,189,248,0.8)]" />
+          <span className="font-mono text-sky-300">{hexA ? hexLabel(propsA) : "Click a hex"}</span>
+        </div>
+        <div className="flex flex-1 items-center gap-1.5 rounded-xl border border-orange-400/30 bg-orange-400/10 px-2 py-1.5">
+          <span className="h-2 w-2 rounded-full bg-orange-400 shadow-[0_0_6px_rgba(251,146,60,0.8)]" />
+          <span className="font-mono text-orange-300">{hexB ? hexLabel(propsB) : "Click a hex"}</span>
+        </div>
+      </div>
+
+      {/* Metric rows */}
+      <div className="space-y-0.5">
+        {hexA && !hexB && (
+          <p className="pb-1 text-xs text-white/40">Select a second hex to compare</p>
+        )}
+        {COMPARE_METRICS.map(({ label, key, digits }) => {
+          const vA = propsA[key] != null ? Number(propsA[key]) : null;
+          const vB = propsB[key] != null ? Number(propsB[key]) : null;
+          const diff = vA != null && vB != null ? vA - vB : null;
+
+          const fmtNum = (v) => {
+            if (v == null || !Number.isFinite(v)) return "—";
+            if (key === "dist_to_region") return `${Math.round(v / 1000)} km`;
+            return d3.format(`.${digits}f`)(v);
+          };
+
+          const diffStr =
+            diff != null && Number.isFinite(diff)
+              ? (diff >= 0 ? "+" : "") + d3.format(key === "dist_to_region" ? ".0f" : `.${digits}f`)(key === "dist_to_region" ? diff / 1000 : diff) + (key === "dist_to_region" ? " km" : "")
+              : null;
+
+          const lowerIsBetter = key === "local_temp_c";
+          const diffColor =
+            diff == null ? ""
+            : Math.abs(diff) <= 0.001 ? "text-white/40"
+            : (diff > 0) === lowerIsBetter ? "text-rose-400"
+            : "text-emerald-400";
+
+          return (
+            <div key={key} className="grid grid-cols-[1fr_auto_auto_auto] items-center gap-x-2 rounded-lg px-2 py-1 hover:bg-white/5">
+              <span className="truncate text-xs text-white/60">{label}</span>
+              <span className="font-mono text-xs text-sky-200">{fmtNum(vA)}</span>
+              <span className="font-mono text-xs text-orange-200">{hexB ? fmtNum(vB) : ""}</span>
+              <span className={`w-14 text-right font-mono text-xs ${diffColor}`}>
+                {diffStr ?? ""}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+
+      {hexA && hexB && (
+        <p className="mt-3 text-center text-xs text-white/30">
+          Diff = A − B · Click a hex to deselect
+        </p>
+      )}
+    </div>
+  );
 }

@@ -56,7 +56,7 @@ To understand their reliability, we look at how each type is distributed across 
 
 To measure the concerns of this growing industry, we developed GridScore. A comprehensive dual-framework, it evaluates data centers on both ESG performance and profitability using a 60/40 weighting system. The ESG component (60%) measures environmental factors like energy efficiency and renewable usage.
 The profitability component (40%) assesses operational efficiency, and computation per energy used, ensuring that sustainable facilities are also financially viable.`,
-    background: IMG + "scoring_breakdown.png",
+    showScoreBreakdown: true,
   },
   {
     id: "gridcast",
@@ -506,6 +506,7 @@ function SplitSection({
   showInternetChart,
   showUSTypeTierChart,
   showPUEChart,
+  showScoreBreakdown,
   basePath,
 }) {
   const isEven = index % 2 === 0;
@@ -539,8 +540,6 @@ function SplitSection({
             </div>
           )}
 
-          {showUSTypeTierChart && <USDataCenterTypeTierChart />}
-
           {showPUEChart && <PUEChart />}
 
           {showLaunchButton && (
@@ -555,7 +554,7 @@ function SplitSection({
           )}
         </motion.div>
 
-        {/* Image Card Column */}
+        {/* Image / Content Card Column */}
         <motion.div
           className={`relative ${isEven ? "md:order-2" : "md:order-1"}`}
           initial={{ opacity: 0, scale: 0.95 }}
@@ -563,19 +562,96 @@ function SplitSection({
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
-            <div className="aspect-[4/3] w-full overflow-hidden">
-              <img
-                src={background}
-                alt={title}
-                className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
+          {showScoreBreakdown ? (
+            <ScoreBreakdown />
+          ) : showUSTypeTierChart ? (
+            <USDataCenterTypeTierChart />
+          ) : (
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-2xl">
+              <div className="aspect-[4/3] w-full overflow-hidden">
+                <img
+                  src={background}
+                  alt={title}
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-          </div>
+          )}
         </motion.div>
       </div>
     </section>
+  );
+}
+
+function ScoreBreakdown() {
+  const sustainability = [
+    { label: "Energy Type", pct: 70, desc: "Renewable share of the local grid" },
+    { label: "Temperature", pct: 30, desc: "Cooler climates reduce cooling load" },
+  ];
+  const profitability = [
+    { label: "Energy Price", pct: 40, desc: "Cost of electricity in the area" },
+    { label: "Grid Capacity", pct: 30, desc: "Available energy supply" },
+    { label: "Volatility", pct: 30, desc: "Consistency of energy delivery" },
+  ];
+
+  return (
+    <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur-md">
+      <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-white/40">GridScore Formula</p>
+
+      {/* Top-level split bar */}
+      <div className="mb-2 flex h-2.5 overflow-hidden rounded-full">
+        <div className="bg-emerald-500" style={{ width: "60%" }} />
+        <div className="w-px bg-black/60" />
+        <div className="bg-sky-500" style={{ width: "40%" }} />
+      </div>
+      <div className="mb-6 flex justify-between text-xs text-white/50">
+        <span>Sustainability — 60%</span>
+        <span>Profitability — 40%</span>
+      </div>
+
+      <div className="grid grid-cols-2 gap-6">
+        {/* Sustainability */}
+        <div>
+          <div className="mb-3 flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)]" />
+            <span className="text-sm font-semibold text-emerald-300">Sustainability</span>
+          </div>
+          {sustainability.map(({ label, pct, desc }) => (
+            <div key={label} className="mb-3">
+              <div className="mb-1 flex justify-between text-xs">
+                <span className="text-white/80">{label}</span>
+                <span className="font-mono text-white/50">{pct}%</span>
+              </div>
+              <div className="h-1.5 rounded-full bg-white/10">
+                <div className="h-full rounded-full bg-emerald-500/80" style={{ width: `${pct}%` }} />
+              </div>
+              <p className="mt-1 text-xs text-white/40">{desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Profitability */}
+        <div>
+          <div className="mb-3 flex items-center gap-2">
+            <span className="h-2 w-2 rounded-full bg-sky-400 shadow-[0_0_6px_rgba(56,189,248,0.8)]" />
+            <span className="text-sm font-semibold text-sky-300">Profitability</span>
+          </div>
+          {profitability.map(({ label, pct, desc }) => (
+            <div key={label} className="mb-3">
+              <div className="mb-1 flex justify-between text-xs">
+                <span className="text-white/80">{label}</span>
+                <span className="font-mono text-white/50">{pct}%</span>
+              </div>
+              <div className="h-1.5 rounded-full bg-white/10">
+                <div className="h-full rounded-full bg-sky-500/80" style={{ width: `${pct}%` }} />
+              </div>
+              <p className="mt-1 text-xs text-white/40">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }
 

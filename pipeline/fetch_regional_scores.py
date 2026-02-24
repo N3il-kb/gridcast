@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import logging
 import os
+import time
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -24,6 +25,7 @@ import requests
 logger = logging.getLogger(__name__)
 
 EIA_BASE_URL = "https://api.eia.gov/v2/electricity/"
+OPEN_METEO_PAUSE = 1.5  # seconds between Open-Meteo calls
 
 # Codes for carbon-free energy sources
 GREEN_CODES = {"SUN", "WND", "WAT", "GEO", "NUC"}
@@ -152,21 +154,34 @@ def _fetch_eia_price(region: str, api_key: str) -> float:
 
 
 def _fetch_temperature(lat: float, lon: float) -> float:
-    """Fetch 60-day mean temperature from Open-Meteo."""
-    try:
-        url = "https://api.open-meteo.com/v1/forecast"
-        params = {
-            "latitude": lat,
-            "longitude": lon,
-            "daily": "temperature_2m_mean",
-            "past_days": 60,
-        }
-        r = requests.get(url, params=params, timeout=10)
-        temps = r.json().get("daily", {}).get("temperature_2m_mean", [])
-        valid = [t for t in temps if t is not None]
-        return np.mean(valid) if valid else np.nan
-    except Exception:
-        return np.nan
+    """Fetch 60-day mean temperature from Open-Meteo with retry."""
+    url = "https://api.open-meteo.com/v1/forecast"
+    params = {
+        "latitude": lat,
+        "longitude": lon,
+        "daily": "temperature_2m_mean",
+        "past_days": 60,
+    }
+    backoff = [15, 45, 135]
+    for attempt in range(len(backoff) + 1):
+        try:
+            r = requests.get(url, params=params, timeout=30)
+            r.raise_for_status()
+            temps = r.json().get("daily", {}).get("temperature_2m_mean", [])
+            valid = [t for t in temps if t is not None]
+            return np.mean(valid) if valid else np.nan
+        except requests.exceptions.HTTPError as e:
+            if e.response is not None and e.response.status_code == 429 and attempt < len(backoff):
+                wait = backoff[attempt]
+                logger.warning("Open-Meteo rate-limited for (%.1f, %.1f), waiting %ds", lat, lon, wait)
+                time.sleep(wait)
+            else:
+                logger.warning("Temperature fetch failed for (%.1f, %.1f): %s", lat, lon, e)
+                return np.nan
+        except Exception as e:
+            logger.warning("Temperature fetch failed for (%.1f, %.1f): %s", lat, lon, e)
+            return np.nan
+    return np.nan
 
 
 def _normalize(series: pd.Series, invert: bool = False) -> pd.Series:
@@ -200,6 +215,7 @@ def run(project_root: Path) -> Path:
         df_demand = _fetch_eia_hourly(region, api_key, cache_dir)
         raw_renew = _fetch_eia_fuelmix(region, api_key)
         raw_price = _fetch_eia_price(region, api_key)
+        time.sleep(OPEN_METEO_PAUSE)  # respect Open-Meteo free-tier rate limits
         raw_temp = _fetch_temperature(lat, lon)
 
         if not df_demand.empty:
@@ -253,6 +269,18 @@ def run(project_root: Path) -> Path:
     dc_df["dc_score"] = 0.40 * dc_df["profitability"] + 0.60 * dc_df["sustainability"]
 
     dc_df = dc_df.sort_values("dc_score", ascending=False).reset_index(drop=True)
+
+    # Validate: all regions present, no all-NaN critical columns
+    expected = len(REGION_COORDS)
+    if len(dc_df) != expected:
+        raise RuntimeError(f"Stage 1: expected {expected} regions, got {len(dc_df)}")
+    critical_cols = ["dc_score", "profitability", "sustainability"]
+    for col in critical_cols:
+        if dc_df[col].isna().all():
+            raise RuntimeError(f"Stage 1: column '{col}' is entirely NaN — all API calls likely failed")
+    nan_counts = dc_df[critical_cols].isna().sum()
+    if nan_counts.any():
+        logger.warning("Stage 1: NaN values in critical columns: %s", nan_counts.to_dict())
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     dc_df.to_csv(output_path, index=False)

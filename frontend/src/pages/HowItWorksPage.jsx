@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Navbar from "@/components/Navbar";
 
@@ -35,7 +35,7 @@ const STEPS = [
   },
 ];
 
-function TimelineStep({ step, index }) {
+function TimelineStep({ step, index, isLast, dotRef }) {
   const isLeft = index % 2 === 0;
 
   const card = (
@@ -53,23 +53,42 @@ function TimelineStep({ step, index }) {
     </motion.div>
   );
 
+  const dot = (
+    <motion.div
+      ref={dotRef}
+      className="flex-none z-10 w-4 h-4 rounded-full bg-neon shadow-[0_0_14px_rgba(0,255,128,0.9)]"
+      initial={{ scale: 0, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-60px" }}
+    />
+  );
+
+  if (isLast) {
+    return (
+      <div>
+        <div className="flex items-center">
+          <div className="flex-1 flex justify-end pr-10">
+            {isLeft ? card : null}
+          </div>
+          <div className="flex-none w-4" />
+          <div className="flex-1 pl-10">
+            {!isLeft ? card : null}
+          </div>
+        </div>
+        <div className="flex justify-center mt-6">
+          {dot}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex items-center">
-      {/* Left half */}
       <div className="flex-1 flex justify-end pr-10">
         {isLeft ? card : null}
       </div>
-
-      {/* Dot — flex item, guaranteed center between the two halves */}
-      <motion.div
-        className="flex-none z-10 w-4 h-4 rounded-full bg-neon shadow-[0_0_14px_rgba(0,255,128,0.9)]"
-        initial={{ scale: 0, opacity: 0 }}
-        whileInView={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.4, ease: "easeOut" }}
-        viewport={{ once: true, margin: "-60px" }}
-      />
-
-      {/* Right half */}
+      {dot}
       <div className="flex-1 flex justify-start pl-10">
         {!isLeft ? card : null}
       </div>
@@ -79,6 +98,28 @@ function TimelineStep({ step, index }) {
 
 export default function HowItWorksPage() {
   const timelineRef = useRef(null);
+  const lastDotRef = useRef(null);
+  const [lineHeight, setLineHeight] = useState("100%");
+
+  // Measure the exact pixel offset from the top of the timeline section
+  // to the center of the last dot, so the line terminates right there.
+  const measureLine = useCallback(() => {
+    if (!timelineRef.current || !lastDotRef.current) return;
+    const sectionTop = timelineRef.current.getBoundingClientRect().top;
+    const dotRect = lastDotRef.current.getBoundingClientRect();
+    const dotCenter = dotRect.top + dotRect.height / 2;
+    setLineHeight(`${dotCenter - sectionTop}px`);
+  }, []);
+
+  useEffect(() => {
+    // Measure after layout settles
+    const id = requestAnimationFrame(measureLine);
+    window.addEventListener("resize", measureLine);
+    return () => {
+      cancelAnimationFrame(id);
+      window.removeEventListener("resize", measureLine);
+    };
+  }, [measureLine]);
 
   const { scrollYProgress } = useScroll({
     target: timelineRef,
@@ -121,33 +162,31 @@ export default function HowItWorksPage() {
         </motion.p>
       </section>
 
-      {/* Timeline — section ends exactly at the terminal dot, no extra padding */}
+      {/* Timeline */}
       <section className="relative max-w-4xl mx-auto px-6" ref={timelineRef}>
-        {/* Track line (gray) */}
-        <div className="absolute left-1/2 -translate-x-px top-0 bottom-0 w-px bg-white/10" />
+        {/* Track line (gray) — also measured to last dot */}
+        <div
+          className="absolute left-1/2 -translate-x-px top-0 w-px bg-white/10"
+          style={{ height: lineHeight }}
+        />
 
-        {/* Animated fill line (neon green) */}
+        {/* Animated fill line (neon green) — terminates at last dot center */}
         <motion.div
           className="absolute left-1/2 -translate-x-px top-0 w-px bg-neon origin-top shadow-[0_0_8px_rgba(0,255,128,0.6)]"
-          style={{ scaleY: lineScaleY, height: "100%" }}
+          style={{ scaleY: lineScaleY, height: lineHeight }}
         />
 
         {/* Steps */}
         <div className="flex flex-col gap-20 py-8">
           {STEPS.map((step, i) => (
-            <TimelineStep key={step.number} step={step} index={i} />
+            <TimelineStep
+              key={step.number}
+              step={step}
+              index={i}
+              isLast={i === STEPS.length - 1}
+              dotRef={i === STEPS.length - 1 ? lastDotRef : undefined}
+            />
           ))}
-        </div>
-
-        {/* Terminal dot — flex justify-center guarantees horizontal centering */}
-        <div className="flex justify-center pb-2">
-          <motion.div
-            className="w-3 h-3 rounded-full bg-neon shadow-[0_0_16px_rgba(0,255,128,1)]"
-            initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            viewport={{ once: true, margin: "-40px" }}
-          />
         </div>
       </section>
 

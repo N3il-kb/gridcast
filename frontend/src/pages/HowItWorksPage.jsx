@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Navbar from "@/components/Navbar";
 
@@ -98,32 +98,43 @@ function TimelineStep({ step, index, isLast, dotRef }) {
 
 export default function HowItWorksPage() {
   const timelineRef = useRef(null);
+  const firstDotRef = useRef(null);
   const lastDotRef = useRef(null);
-  const [lineHeight, setLineHeight] = useState("100%");
+  const [lineBounds, setLineBounds] = useState({ top: 0, height: 0 });
 
-  // Measure the exact pixel offset from the top of the timeline section
-  // to the center of the last dot, so the line terminates right there.
-  const measureLine = useCallback(() => {
-    if (!timelineRef.current || !lastDotRef.current) return;
-    const sectionTop = timelineRef.current.getBoundingClientRect().top;
-    const dotRect = lastDotRef.current.getBoundingClientRect();
-    const dotCenter = dotRect.top + dotRect.height / 2;
-    setLineHeight(`${dotCenter - sectionTop}px`);
+  const measureLineBounds = useCallback(() => {
+    if (!timelineRef.current || !firstDotRef.current || !lastDotRef.current) return;
+
+    const timelineRect = timelineRef.current.getBoundingClientRect();
+    const firstDotRect = firstDotRef.current.getBoundingClientRect();
+    const lastDotRect = lastDotRef.current.getBoundingClientRect();
+
+    const top = firstDotRect.top + firstDotRect.height / 2 - timelineRect.top;
+    const bottom = lastDotRect.top + lastDotRect.height / 2 - timelineRect.top;
+    const height = Math.max(bottom - top, 0);
+
+    setLineBounds((prev) => (
+      prev.top === top && prev.height === height ? prev : { top, height }
+    ));
   }, []);
 
   useEffect(() => {
-    // Measure after layout settles
-    const id = requestAnimationFrame(measureLine);
-    window.addEventListener("resize", measureLine);
+    const raf = requestAnimationFrame(measureLineBounds);
+    window.addEventListener("resize", measureLineBounds);
+
+    const observer = new ResizeObserver(measureLineBounds);
+    if (timelineRef.current) observer.observe(timelineRef.current);
+
     return () => {
-      cancelAnimationFrame(id);
-      window.removeEventListener("resize", measureLine);
+      cancelAnimationFrame(raf);
+      window.removeEventListener("resize", measureLineBounds);
+      observer.disconnect();
     };
-  }, [measureLine]);
+  }, [measureLineBounds]);
 
   const { scrollYProgress } = useScroll({
     target: timelineRef,
-    offset: ["start 80%", "end 20%"],
+    offset: ["start 80%", "end end"],
   });
 
   const lineScaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
@@ -162,29 +173,35 @@ export default function HowItWorksPage() {
         </motion.p>
       </section>
 
-      {/* Timeline */}
+      {/* Timeline — section ends at last dot so the line naturally terminates there */}
       <section className="relative max-w-4xl mx-auto px-6" ref={timelineRef}>
-        {/* Track line (gray) — also measured to last dot */}
+        {/* Track line (gray) */}
         <div
-          className="absolute left-1/2 -translate-x-px top-0 w-px bg-white/10"
-          style={{ height: lineHeight }}
+          className="absolute left-1/2 -translate-x-px w-px bg-white/10"
+          style={{ top: lineBounds.top, height: lineBounds.height }}
         />
 
-        {/* Animated fill line (neon green) — terminates at last dot center */}
+        {/* Animated fill line (neon green) */}
         <motion.div
-          className="absolute left-1/2 -translate-x-px top-0 w-px bg-neon origin-top shadow-[0_0_8px_rgba(0,255,128,0.6)]"
-          style={{ scaleY: lineScaleY, height: lineHeight }}
+          className="absolute left-1/2 -translate-x-px w-px bg-neon origin-top shadow-[0_0_8px_rgba(0,255,128,0.6)]"
+          style={{ top: lineBounds.top, height: lineBounds.height, scaleY: lineScaleY }}
         />
 
-        {/* Steps */}
-        <div className="flex flex-col gap-20 py-8">
+        {/* Steps — no bottom padding so section ends at the last dot */}
+        <div className="flex flex-col gap-20 pt-8">
           {STEPS.map((step, i) => (
             <TimelineStep
               key={step.number}
               step={step}
               index={i}
               isLast={i === STEPS.length - 1}
-              dotRef={i === STEPS.length - 1 ? lastDotRef : undefined}
+              dotRef={
+                i === 0
+                  ? firstDotRef
+                  : i === STEPS.length - 1
+                    ? lastDotRef
+                    : undefined
+              }
             />
           ))}
         </div>

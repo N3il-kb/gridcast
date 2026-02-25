@@ -34,10 +34,10 @@ export default function Navbar() {
           </li>
           <li>
             <a
-              href="#datacenters"
+              href={`${BASE_PATH}how-it-works`}
               className="transition hover:text-neon hover:drop-shadow-[0_0_8px_rgba(0,255,128,0.6)] font-medium"
             >
-              More Info
+              How It Works
             </a>
           </li>
         </ul>

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Dither from "@/components/Dither";
 import Navbar from "@/components/Navbar";
 import D3ScoreMapPage from "@/pages/D3ScoreMapPage";
+import HowItWorksPage from "@/pages/HowItWorksPage";
 import InternetUsageChart from "@/components/InternetUsageChart";
 import PUEChart from "@/components/PUEChart";
 
@@ -78,6 +79,7 @@ export default function App() {
     const hash = window.location.hash.toLowerCase();
     if (path.includes("dashboard") || hash.includes("dashboard")) return "dashboard";
     if (path.includes("contact") || hash.includes("contact")) return "contact";
+    if (path.includes("how-it-works") || hash.includes("how-it-works")) return "how-it-works";
     return "home";
   };
 
@@ -98,6 +100,9 @@ export default function App() {
   }
   if (route === "contact") {
     return <ContactPage />;
+  }
+  if (route === "how-it-works") {
+    return <HowItWorksPage />;
   }
 
   return (

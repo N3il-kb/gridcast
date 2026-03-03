@@ -3,6 +3,7 @@ import * as d3 from "d3";
 import mapboxgl from "mapbox-gl";
 import Navbar from "@/components/Navbar";
 import Dither from "@/components/Dither";
+import GridAskWidget from "@/components/GridAskWidget";
 
 const BASE_PATH = import.meta.env.BASE_URL ?? "/";
 
@@ -83,6 +84,7 @@ export default function D3ScoreMapPage() {
   const [mapReady, setMapReady] = useState(false);
   const [selectedA, setSelectedA] = useState(null);
   const [selectedB, setSelectedB] = useState(null);
+  const [chatOpen, setChatOpen] = useState(false);
   const selectedARef = useRef(null);
   const selectedBRef = useRef(null);
 
@@ -526,16 +528,16 @@ export default function D3ScoreMapPage() {
     });
   }, [domain, metric]);
 
-  // Trigger Mapbox resize when panel opens/closes (map container width changes)
+  // Trigger Mapbox resize after panel CSS transitions finish (250ms ease)
   const panelOpen = !!(selectedA || selectedB);
   useEffect(() => {
     if (!mapRef.current) return;
     const timer = setTimeout(() => {
       mapRef.current?.resize();
       render();
-    }, 0);
+    }, 270);
     return () => clearTimeout(timer);
-  }, [panelOpen]);
+  }, [panelOpen, chatOpen]);
 
   // Ensure hover clears when leaving the wrapper (covers embedded contexts)
   useEffect(() => {
@@ -572,13 +574,12 @@ export default function D3ScoreMapPage() {
 
       <Navbar />
 
-      <main className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16 pt-24">
-        {/* <div className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-emerald-200 shadow-[0_0_25px_rgba(16,185,129,0.35)]">
-          Mapbox + D3 GridScore dashboard
-        </div> */}
+      <main className="flex flex-col gap-6 pb-16 pt-24">
+        {/* Constrained header + toolbar */}
+        <div className="px-8 max-w-5xl mx-auto w-full flex flex-col gap-6">
         <div className="space-y-3">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            GridCast Score Map!
+            GridCast Score Map
           </h1>
           <p className="max-w-4xl text-lg text-white/70">
             Interactive hex-grid visualization powered by D3 and Mapbox. Hover any cell to inspect profitability,
@@ -586,25 +587,46 @@ export default function D3ScoreMapPage() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 backdrop-blur-md sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-3">
-            <label className="text-sm uppercase tracking-wide text-white/60">Color by</label>
-            <select
-              className="rounded-xl border border-white/10 bg-[#0c1421] px-4 py-3 text-base text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
-              value={metric}
-              onChange={(e) => setMetric(e.target.value)}
-            >
-              {Object.entries(METRICS).map(([key, meta]) => (
-                <option key={key} value={key}>
-                  {meta.label}
-                </option>
-              ))}
-            </select>
-            <span className="text-sm text-white/70">{metricCopy}</span>
-          </div>
+        <div className="flex flex-wrap items-center gap-4 rounded-2xl border border-white/5 bg-white/5 p-4 backdrop-blur-md">
+          <label className="text-sm uppercase tracking-wide text-white/60">Color by</label>
+          <select
+            className="rounded-xl border border-white/10 bg-[#0c1421] px-4 py-3 text-base text-white shadow-[0_10px_30px_rgba(0,0,0,0.35)]"
+            value={metric}
+            onChange={(e) => setMetric(e.target.value)}
+          >
+            {Object.entries(METRICS).map(([key, meta]) => (
+              <option key={key} value={key}>
+                {meta.label}
+              </option>
+            ))}
+          </select>
+          <span className="text-sm text-white/70">{metricCopy}</span>
         </div>
+        </div>{/* end constrained header */}
 
         <div className="flex items-stretch gap-4">
+          {/* Compare panel — flex sibling, left side */}
+          <div
+            className="flex-shrink-0 h-[70vh] min-h-[520px]"
+            style={{ width: panelOpen ? "288px" : "0px", overflow: "hidden", transition: "width 0.25s ease" }}
+          >
+            <div className="w-72 h-full">
+              {(selectedA || selectedB) && (
+                <ComparePanel
+                  hexA={selectedA}
+                  hexB={selectedB}
+                  onClose={() => {
+                    selectedARef.current = null;
+                    selectedBRef.current = null;
+                    setSelectedA(null);
+                    setSelectedB(null);
+                    render();
+                  }}
+                />
+              )}
+            </div>
+          </div>
+
           <div
             ref={wrapperRef}
             className="relative flex-1 min-w-0 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0a1320] via-[#08111d] to-[#0e1624] shadow-[0_30px_80px_rgba(0,0,0,0.35)] h-[70vh] min-h-[520px]"
@@ -663,30 +685,25 @@ export default function D3ScoreMapPage() {
           )}
           </div>{/* end map wrapper */}
 
-          {/* Compare panel — flex sibling */}
+          {/* GridAsk panel — flex sibling */}
           <div
             className="flex-shrink-0 h-[70vh] min-h-[520px]"
-            style={{ width: panelOpen ? "288px" : "0px", overflow: "hidden" }}
+            style={{ width: chatOpen ? "300px" : "0px", overflow: "hidden", transition: "width 0.25s ease" }}
           >
-            <div className="w-72 h-full">
-              {(selectedA || selectedB) && (
-                <ComparePanel
+            <div className="w-[300px] h-full">
+              {chatOpen && (
+                <GridAskWidget
                   hexA={selectedA}
                   hexB={selectedB}
-                  onClose={() => {
-                    selectedARef.current = null;
-                    selectedBRef.current = null;
-                    setSelectedA(null);
-                    setSelectedB(null);
-                    render();
-                  }}
+                  onClose={() => setChatOpen(false)}
                 />
               )}
             </div>
           </div>
+
         </div>{/* end flex row */}
 
-        <div className="flex items-center gap-3 text-sm text-white/70">
+        <div className="px-8 flex items-center gap-3 text-sm text-white/70">
           <span className="w-16 text-right font-mono text-xs text-white/60">{formatValue(domain[0])}</span>
           <div className="flex-1 rounded-full border border-white/10 p-[1px]">
             <div className="h-3 w-full rounded-full" style={{ background: legendGradient(legendStops) }} />
@@ -694,6 +711,29 @@ export default function D3ScoreMapPage() {
           <span className="w-16 text-left font-mono text-xs text-white/60">{formatValue(domain[1])}</span>
         </div>
       </main>
+
+      {/* GridAsk FAB */}
+      <div className="fixed bottom-8 right-8 z-50">
+        {(selectedA || selectedB) && !chatOpen && (
+          <span className="absolute inset-0 rounded-full bg-neon animate-ping opacity-30 pointer-events-none" />
+        )}
+        <button
+          onClick={() => setChatOpen((v) => !v)}
+          title="GridAsk"
+          className={`relative flex h-14 w-14 items-center justify-center rounded-full shadow-2xl transition-all duration-200 ${
+            chatOpen
+              ? "bg-neon text-black shadow-[0_0_24px_rgba(0,255,128,0.55)] scale-95"
+              : (selectedA || selectedB)
+                ? "bg-[#0c1622] border-2 border-neon text-neon shadow-[0_0_20px_rgba(0,255,128,0.35)] hover:scale-105"
+                : "bg-[#0c1622] border border-white/20 text-white/60 hover:border-neon/50 hover:text-neon hover:scale-105"
+          }`}
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+          </svg>
+        </button>
+      </div>
+
     </div>
   );
 

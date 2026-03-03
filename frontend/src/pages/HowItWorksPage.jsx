@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Navbar from "@/components/Navbar";
-import { image } from "d3";
 
 const STEPS = [
   {
@@ -9,35 +8,35 @@ const STEPS = [
     title: "EIA API",
     subtitle: "Energy Information Administration",
     body: "We pull live grid data from the U.S. Energy Information Administration for 13 regional electricity markets. For each region, we collect hourly electricity demand, fuel mix (solar, wind, nuclear, gas, etc.), and real-time electricity prices.",
-    image: { src: "/public/images/eia-logo.png", alt: "EIA logo" },
+    image: { src: "/images/eia-logo.png", alt: "EIA logo" },
   },
   {
     number: "02",
     title: "Open-Meteo",
     subtitle: "Weather & Climate Data",
     body: "Temperature is a key factor in data center efficiency — cooling costs rise sharply in hot climates. We fetch a 60-day mean temperature for each region's geographic coordinates from Open-Meteo's free forecast API.",
-    image: { src: "/public/images/open-meteo-logo.png", alt: "Open-Meteo logo" }
+    image: { src: "/images/open-meteo-logo.png", alt: "Open-Meteo logo" }
   },
   {
     number: "03",
     title: "AWS Fargate",
     subtitle: "Serverless Pipeline Execution",
     body: "A containerized Python pipeline runs daily on AWS Fargate — no servers to manage. EventBridge triggers the container each morning, it fetches all data sources in sequence, computes scores, and uploads the results to S3.",
-    image: { src: "/public/images/aws-logo.png", alt: "AWS logo" }
+    image: { src: "/images/aws-logo.png", alt: "AWS logo" }
   },
   {
     number: "04",
     title: "GridAsk",
     subtitle: "AI-Powered Grid Intelligence",
     body: "GridAsk is an OpenAI-powered assistant built on top of the GridScore data. Ask it anything about the grid — which regions are cheapest right now, where renewable energy is peaking, or how conditions compare across markets. It interprets the data and answers in plain language.",
-    image: { src: "/public/images/OpenAI-logo.png", alt: "GridAsk logo" }
+    image: { src: "/images/OpenAI-logo.png", alt: "GridAsk logo" }
   },
   {
     number: "05",
     title: "GridCast Frontend",
     subtitle: "Interactive Hex Map on Vercel",
     body: "The React + Mapbox frontend fetches the latest score JSON from S3 and renders it as an interactive H3 hex grid. Users can switch between metrics, hover for details, and compare any two hexagons side-by-side.",
-    image: { src: "/public/images/vercel-logo.png", alt: "vercel logo" },
+    image: { src: "/images/vercel-logo.png", alt: "vercel logo" },
   },
 ];
 

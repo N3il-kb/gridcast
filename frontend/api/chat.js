@@ -1,5 +1,5 @@
 import { openai } from "@ai-sdk/openai";
-import { streamText } from "ai";
+import { streamText, convertToModelMessages } from "ai";
 
 export const config = { runtime: "edge" };
 
@@ -19,7 +19,7 @@ function hexSummary(props, label) {
 }
 
 export default async function handler(request) {
-  const { messages, hexA, hexB } = await request.json();
+  const { messages = [], hexA, hexB } = await request.json();
 
   const hexContext = [hexSummary(hexA, "Hex A"), hexSummary(hexB, "Hex B")]
     .filter(Boolean)
@@ -35,19 +35,35 @@ ${hexContext ? `Currently selected hexagons:\n${hexContext}` : "No hexagons curr
 
 Answer questions about the grid, explain scores, compare regions, and give data center suitability insights. Be concise and factual. If no hexagons are selected, give general grid insights.`;
 
-  const modelMessages = messages.map((m) => ({
-    role: m.role,
-    content:
-      m.parts?.filter((p) => p.type === "text").map((p) => p.text).join("") ??
-      m.content ??
-      "",
-  }));
+  try {
+    const modelMessages = await convertToModelMessages(messages);
 
-  const result = await streamText({
-    model: openai("gpt-4o-mini"),
-    system: systemPrompt,
-    messages: modelMessages,
-  });
+    const result = streamText({
+      model: openai("gpt-4o-mini"),
+      system: systemPrompt,
+      messages: modelMessages,
+    });
 
-  return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse();
+  } catch (error) {
+    // Fallback: manually map messages if convertToModelMessages fails
+    const fallbackMessages = messages.map((m) => ({
+      role: m.role,
+      content:
+        m.parts
+          ?.filter((p) => p.type === "text")
+          .map((p) => p.text)
+          .join("") ||
+        (typeof m.content === "string" ? m.content : "") ||
+        "",
+    }));
+
+    const result = streamText({
+      model: openai("gpt-4o-mini"),
+      system: systemPrompt,
+      messages: fallbackMessages,
+    });
+
+    return result.toUIMessageStreamResponse();
+  }
 }

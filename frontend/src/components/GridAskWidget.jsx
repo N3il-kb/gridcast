@@ -5,7 +5,7 @@ export default function GridAskWidget({ hexA, hexB, onClose }) {
   const bottomRef = useRef(null);
   const [text, setText] = useState("");
 
-  const { messages, sendMessage, status, setMessages } = useChat({ api: "/api/chat" });
+  const { messages, sendMessage, status, error, setMessages } = useChat({ api: "/api/chat" });
   const isLoading = status === "streaming" || status === "submitted";
 
   // Clear chat when hex selection changes
@@ -59,18 +59,21 @@ export default function GridAskWidget({ hexA, hexB, onClose }) {
         )}
 
         {messages.map((m) => {
-          const text = m.parts?.filter(p => p.type === "text").map(p => p.text).join("") ?? "";
-          if (!text) return null;
+          const msgText =
+            m.parts?.filter(p => p.type === "text").map(p => p.text).join("") ||
+            (typeof m.content === "string" ? m.content : "") ||
+            "";
+          if (!msgText) return null;
           return (
             <div key={m.id} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
               <div
-                className={`max-w-[86%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
+                className={`max-w-[86%] rounded-xl px-3 py-2 text-xs leading-relaxed whitespace-pre-wrap ${
                   m.role === "user"
                     ? "bg-neon text-black font-medium"
                     : "bg-white/[0.07] text-white/85 border border-white/10"
                 }`}
               >
-                {text}
+                {msgText}
               </div>
             </div>
           );
@@ -80,6 +83,14 @@ export default function GridAskWidget({ hexA, hexB, onClose }) {
           <div className="flex justify-start">
             <div className="bg-white/[0.07] border border-white/10 rounded-xl px-3 py-2">
               <span className="text-neon/70 text-xs tracking-widest">···</span>
+            </div>
+          </div>
+        )}
+
+        {status === "error" && (
+          <div className="flex justify-start">
+            <div className="bg-red-500/10 border border-red-500/30 rounded-xl px-3 py-2 text-xs text-red-400">
+              {error?.message || "Something went wrong. Please try again."}
             </div>
           </div>
         )}

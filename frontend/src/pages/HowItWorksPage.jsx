@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import { image } from "d3";
 
 const STEPS = [
   {
@@ -8,35 +9,41 @@ const STEPS = [
     title: "EIA API",
     subtitle: "Energy Information Administration",
     body: "We pull live grid data from the U.S. Energy Information Administration for 13 regional electricity markets. For each region, we collect hourly electricity demand, fuel mix (solar, wind, nuclear, gas, etc.), and real-time electricity prices.",
+    image: { src: "/public/images/eia-logo.png", alt: "EIA logo" },
   },
   {
     number: "02",
     title: "Open-Meteo",
     subtitle: "Weather & Climate Data",
     body: "Temperature is a key factor in data center efficiency — cooling costs rise sharply in hot climates. We fetch a 60-day mean temperature for each region's geographic coordinates from Open-Meteo's free forecast API.",
+    image: { src: "/public/images/open-meteo-logo.png", alt: "Open-Meteo logo" }
   },
   {
     number: "03",
     title: "AWS Fargate",
     subtitle: "Serverless Pipeline Execution",
     body: "A containerized Python pipeline runs daily on AWS Fargate — no servers to manage. EventBridge triggers the container each morning, it fetches all data sources in sequence, computes scores, and uploads the results to S3.",
+    image: { src: "/public/images/aws-logo.png", alt: "AWS logo" }
   },
   {
     number: "04",
-    title: "Scoring Engine",
-    subtitle: "GridScore Computation",
-    body: "Raw signals are normalized region-to-region and combined into GridScore. Sustainability (60%) weighs renewable energy percentage and climate. Profitability (40%) weighs electricity price, demand, and volatility. The result: a single 0–1 score for each grid region.",
+    title: "GridAsk",
+    subtitle: "AI-Powered Grid Intelligence",
+    body: "GridAsk is an OpenAI-powered assistant built on top of the GridScore data. Ask it anything about the grid — which regions are cheapest right now, where renewable energy is peaking, or how conditions compare across markets. It interprets the data and answers in plain language.",
+    image: { src: "/public/images/OpenAI-logo.png", alt: "GridAsk logo" }
   },
   {
     number: "05",
     title: "GridCast Frontend",
     subtitle: "Interactive Hex Map on Vercel",
     body: "The React + Mapbox frontend fetches the latest score JSON from S3 and renders it as an interactive H3 hex grid. Users can switch between metrics, hover for details, and compare any two hexagons side-by-side.",
+    image: { src: "/public/images/vercel-logo.png", alt: "vercel logo" },
   },
 ];
 
 function TimelineStep({ step, index, isLast, dotRef }) {
   const isLeft = index % 2 === 0;
+  const hasImage = Boolean(step.image?.src);
 
   const card = (
     <motion.div
@@ -64,16 +71,32 @@ function TimelineStep({ step, index, isLast, dotRef }) {
     />
   );
 
+  const media = hasImage ? (
+    <motion.div
+      className="w-full max-w-sm flex items-center justify-center"
+      initial={{ opacity: 0, x: isLeft ? 40 : -40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, margin: "-80px" }}
+    >
+      <img
+        src={step.image.src}
+        alt={step.image.alt ?? `${step.title} logo`}
+        className="block max-h-52 md:max-h-64 w-auto max-w-full object-contain"
+      />
+    </motion.div>
+  ) : null;
+
   if (isLast) {
     return (
       <div>
         <div className="flex items-center">
           <div className="flex-1 flex justify-end pr-10">
-            {isLeft ? card : null}
+            {isLeft ? card : media}
           </div>
           <div className="flex-none w-4" />
-          <div className="flex-1 pl-10">
-            {!isLeft ? card : null}
+          <div className="flex-1 flex justify-start pl-10">
+            {!isLeft ? card : media}
           </div>
         </div>
         <div className="flex justify-center mt-6">
@@ -86,11 +109,11 @@ function TimelineStep({ step, index, isLast, dotRef }) {
   return (
     <div className="flex items-center">
       <div className="flex-1 flex justify-end pr-10">
-        {isLeft ? card : null}
+        {isLeft ? card : media}
       </div>
       {dot}
       <div className="flex-1 flex justify-start pl-10">
-        {!isLeft ? card : null}
+        {!isLeft ? card : media}
       </div>
     </div>
   );

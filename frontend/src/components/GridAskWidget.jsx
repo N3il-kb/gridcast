@@ -1,5 +1,37 @@
 import { useEffect, useRef, useState } from "react";
 import { useChat } from "@ai-sdk/react";
+import ReactMarkdown from "react-markdown";
+
+function AssistantMessage({ children }) {
+  return (
+    <ReactMarkdown
+      components={{
+        p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
+        strong: ({ children }) => <strong className="font-semibold text-white">{children}</strong>,
+        em: ({ children }) => <em className="italic text-white/90">{children}</em>,
+        ul: ({ children }) => <ul className="list-disc pl-4 mb-2 space-y-0.5">{children}</ul>,
+        ol: ({ children }) => <ol className="list-decimal pl-4 mb-2 space-y-0.5">{children}</ol>,
+        li: ({ children }) => <li>{children}</li>,
+        h1: ({ children }) => <h3 className="font-bold text-white mb-1">{children}</h3>,
+        h2: ({ children }) => <h3 className="font-bold text-white mb-1">{children}</h3>,
+        h3: ({ children }) => <h3 className="font-bold text-white mb-1">{children}</h3>,
+        code: ({ children }) => (
+          <code className="bg-white/10 rounded px-1 py-0.5 font-mono text-[10px]">{children}</code>
+        ),
+        pre: ({ children }) => (
+          <pre className="bg-white/10 rounded-lg p-2 overflow-x-auto mb-2 text-[10px]">{children}</pre>
+        ),
+        a: ({ href, children }) => (
+          <a href={href} target="_blank" rel="noopener noreferrer" className="text-neon underline underline-offset-2">
+            {children}
+          </a>
+        ),
+      }}
+    >
+      {children}
+    </ReactMarkdown>
+  );
+}
 
 export default function GridAskWidget({ hexA, hexB, onClose }) {
   const bottomRef = useRef(null);
@@ -67,13 +99,13 @@ export default function GridAskWidget({ hexA, hexB, onClose }) {
           return (
             <div key={m.id} className={`flex ${m.role === "user" ? "justify-end" : "justify-start"}`}>
               <div
-                className={`max-w-[86%] rounded-xl px-3 py-2 text-xs leading-relaxed whitespace-pre-wrap ${
+                className={`max-w-[86%] rounded-xl px-3 py-2 text-xs leading-relaxed ${
                   m.role === "user"
                     ? "bg-neon text-black font-medium"
                     : "bg-white/[0.07] text-white/85 border border-white/10"
                 }`}
               >
-                {msgText}
+                {m.role === "user" ? msgText : <AssistantMessage>{msgText}</AssistantMessage>}
               </div>
             </div>
           );

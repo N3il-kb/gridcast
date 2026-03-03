@@ -1,5 +1,5 @@
 import { openai } from "@ai-sdk/openai";
-import { streamText, convertToModelMessages } from "ai";
+import { streamText } from "ai";
 
 export const config = { runtime: "edge" };
 
@@ -35,10 +35,18 @@ ${hexContext ? `Currently selected hexagons:\n${hexContext}` : "No hexagons curr
 
 Answer questions about the grid, explain scores, compare regions, and give data center suitability insights. Be concise and factual. If no hexagons are selected, give general grid insights.`;
 
+  const modelMessages = messages.map((m) => ({
+    role: m.role,
+    content:
+      m.parts?.filter((p) => p.type === "text").map((p) => p.text).join("") ??
+      m.content ??
+      "",
+  }));
+
   const result = await streamText({
     model: openai("gpt-4o-mini"),
     system: systemPrompt,
-    messages: convertToModelMessages(messages),
+    messages: modelMessages,
   });
 
   return result.toUIMessageStreamResponse();

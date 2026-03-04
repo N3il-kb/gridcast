@@ -11,3 +11,4 @@ prophet
 folium
 scikit-learn
 python-dotenv
+boto3

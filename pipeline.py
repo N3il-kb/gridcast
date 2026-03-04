@@ -24,11 +24,13 @@ from __future__ import annotations
 
 import argparse
 import logging
+import os
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+import boto3
 from dotenv import load_dotenv
 
 # Project root is the directory containing this script
@@ -44,6 +46,27 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger("pipeline")
+
+
+S3_BUCKET = os.getenv("S3_BUCKET", "gridcast-data")
+S3_KEY = "score_map_hex.json"
+
+
+def upload_to_s3(local_path: Path) -> None:
+    """Upload the score map JSON to S3 with public-read ACL."""
+    logger.info("=" * 60)
+    logger.info("STAGE 4: Uploading to S3")
+    logger.info("=" * 60)
+    t0 = time.time()
+    s3 = boto3.client("s3")
+    s3.upload_file(
+        str(local_path),
+        S3_BUCKET,
+        S3_KEY,
+        ExtraArgs={"ContentType": "application/json"},
+    )
+    url = f"https://{S3_BUCKET}.s3.amazonaws.com/{S3_KEY}"
+    logger.info("Stage 4 complete in %.1fs → %s", time.time() - t0, url)
 
 
 def run_stage_1():
@@ -106,11 +129,14 @@ def run_all():
                 sys.exit(1)
 
     # Stage 3 depends on both 1 and 2
-    run_stage_3()
+    output_path = run_stage_3()
+
+    # Stage 4: upload to S3
+    upload_to_s3(output_path)
 
     logger.info("=" * 60)
     logger.info("Pipeline complete in %.1fs", time.time() - t0)
-    logger.info("Output: frontend/public/data/score_map_hex.json")
+    logger.info("Output: https://%s.s3.amazonaws.com/%s", S3_BUCKET, S3_KEY)
     logger.info("=" * 60)
 
 

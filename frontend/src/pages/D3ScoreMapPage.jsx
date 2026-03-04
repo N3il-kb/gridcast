@@ -186,7 +186,7 @@ export default function D3ScoreMapPage() {
     const load = async () => {
       try {
         setStatus("loading");
-        const res = await fetch(`${BASE_PATH}data/score_map_hex.json`);
+        const res = await fetch("https://gridcast-data.s3.amazonaws.com/score_map_hex.json");
         if (!res.ok) {
           throw new Error(`HTTP ${res.status}`);
         }

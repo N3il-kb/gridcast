@@ -1,4 +1,8 @@
 period,respondent,respondent-name,type,type-name,value,value-units,datetime,demand_MW
+2026-03-04T03,CENT,Central,DF,Day-ahead demand forecast,36986,megawatthours,2026-03-04 03:00:00,36986.0
+2026-03-04T02,CENT,Central,D,Demand,33770,megawatthours,2026-03-04 02:00:00,33770.0
+2026-03-04T02,CENT,Central,DF,Day-ahead demand forecast,37283,megawatthours,2026-03-04 02:00:00,37283.0
+2026-03-04T01,CENT,Central,D,Demand,33842,megawatthours,2026-03-04 01:00:00,33842.0
 2026-03-04T01,CENT,Central,DF,Day-ahead demand forecast,37141,megawatthours,2026-03-04 01:00:00,37141.0
 2026-03-04T00,CENT,Central,D,Demand,33407,megawatthours,2026-03-04 00:00:00,33407.0
 2026-03-04T00,CENT,Central,DF,Day-ahead demand forecast,36641,megawatthours,2026-03-04 00:00:00,36641.0
@@ -8,9 +12,9 @@ period,respondent,respondent-name,type,type-name,value,value-units,datetime,dema
 2026-03-03T22,CENT,Central,DF,Day-ahead demand forecast,36392,megawatthours,2026-03-03 22:00:00,36392.0
 2026-03-03T21,CENT,Central,D,Demand,32953,megawatthours,2026-03-03 21:00:00,32953.0
 2026-03-03T21,CENT,Central,DF,Day-ahead demand forecast,36500,megawatthours,2026-03-03 21:00:00,36500.0
-2026-03-03T20,CENT,Central,D,Demand,32900,megawatthours,2026-03-03 20:00:00,32900.0
+2026-03-03T20,CENT,Central,D,Demand,32901,megawatthours,2026-03-03 20:00:00,32901.0
 2026-03-03T20,CENT,Central,DF,Day-ahead demand forecast,36447,megawatthours,2026-03-03 20:00:00,36447.0
-2026-03-03T19,CENT,Central,D,Demand,32768,megawatthours,2026-03-03 19:00:00,32768.0
+2026-03-03T19,CENT,Central,D,Demand,32760,megawatthours,2026-03-03 19:00:00,32760.0
 2026-03-03T19,CENT,Central,DF,Day-ahead demand forecast,36194,megawatthours,2026-03-03 19:00:00,36194.0
 2026-03-03T18,CENT,Central,D,Demand,32805,megawatthours,2026-03-03 18:00:00,32805.0
 2026-03-03T18,CENT,Central,DF,Day-ahead demand forecast,36179,megawatthours,2026-03-03 18:00:00,36179.0
@@ -1490,7 +1494,3 @@ period,respondent,respondent-name,type,type-name,value,value-units,datetime,dema
 2026-02-16T03,CENT,Central,DF,Day-ahead demand forecast,34684,megawatthours,2026-02-16 03:00:00,34684.0
 2026-02-16T03,CENT,Central,NG,Net generation,32112,megawatthours,2026-02-16 03:00:00,32112.0
 2026-02-16T03,CENT,Central,TI,Total interchange,976,megawatthours,2026-02-16 03:00:00,976.0
-2026-02-16T02,CENT,Central,D,Demand,31499,megawatthours,2026-02-16 02:00:00,31499.0
-2026-02-16T02,CENT,Central,DF,Day-ahead demand forecast,34806,megawatthours,2026-02-16 02:00:00,34806.0
-2026-02-16T02,CENT,Central,NG,Net generation,33055,megawatthours,2026-02-16 02:00:00,33055.0
-2026-02-16T02,CENT,Central,TI,Total interchange,1555,megawatthours,2026-02-16 02:00:00,1555.0

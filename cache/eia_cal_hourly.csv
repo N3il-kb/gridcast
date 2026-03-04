@@ -1,14 +1,18 @@
 period,respondent,respondent-name,type,type-name,value,value-units,datetime,demand_MW
+2026-03-04T03,CAL,California,DF,Day-ahead demand forecast,32070,megawatthours,2026-03-04 03:00:00,32070.0
+2026-03-04T02,CAL,California,D,Demand,29409,megawatthours,2026-03-04 02:00:00,29409.0
+2026-03-04T02,CAL,California,DF,Day-ahead demand forecast,30422,megawatthours,2026-03-04 02:00:00,30422.0
+2026-03-04T01,CAL,California,D,Demand,28461,megawatthours,2026-03-04 01:00:00,28461.0
 2026-03-04T01,CAL,California,DF,Day-ahead demand forecast,27668,megawatthours,2026-03-04 01:00:00,27668.0
-2026-03-04T00,CAL,California,D,Demand,25756,megawatthours,2026-03-04 00:00:00,25756.0
+2026-03-04T00,CAL,California,D,Demand,27803,megawatthours,2026-03-04 00:00:00,27803.0
 2026-03-04T00,CAL,California,DF,Day-ahead demand forecast,24876,megawatthours,2026-03-04 00:00:00,24876.0
-2026-03-03T23,CAL,California,D,Demand,28251,megawatthours,2026-03-03 23:00:00,28251.0
+2026-03-03T23,CAL,California,D,Demand,28196,megawatthours,2026-03-03 23:00:00,28196.0
 2026-03-03T23,CAL,California,DF,Day-ahead demand forecast,22646,megawatthours,2026-03-03 23:00:00,22646.0
 2026-03-03T22,CAL,California,D,Demand,28341,megawatthours,2026-03-03 22:00:00,28341.0
 2026-03-03T22,CAL,California,DF,Day-ahead demand forecast,21401,megawatthours,2026-03-03 22:00:00,21401.0
 2026-03-03T21,CAL,California,D,Demand,29271,megawatthours,2026-03-03 21:00:00,29271.0
 2026-03-03T21,CAL,California,DF,Day-ahead demand forecast,21015,megawatthours,2026-03-03 21:00:00,21015.0
-2026-03-03T20,CAL,California,D,Demand,30198,megawatthours,2026-03-03 20:00:00,30198.0
+2026-03-03T20,CAL,California,D,Demand,30199,megawatthours,2026-03-03 20:00:00,30199.0
 2026-03-03T20,CAL,California,DF,Day-ahead demand forecast,21426,megawatthours,2026-03-03 20:00:00,21426.0
 2026-03-03T19,CAL,California,D,Demand,29670,megawatthours,2026-03-03 19:00:00,29670.0
 2026-03-03T19,CAL,California,DF,Day-ahead demand forecast,22846,megawatthours,2026-03-03 19:00:00,22846.0
@@ -1439,7 +1443,3 @@ period,respondent,respondent-name,type,type-name,value,value-units,datetime,dema
 2026-02-16T17,CAL,California,NG,Net generation,20551,megawatthours,2026-02-16 17:00:00,20551.0
 2026-02-16T17,CAL,California,TI,Total interchange,-7195,megawatthours,2026-02-16 17:00:00,-7195.0
 2026-02-16T16,CAL,California,D,Demand,28165,megawatthours,2026-02-16 16:00:00,28165.0
-2026-02-16T16,CAL,California,DF,Day-ahead demand forecast,27944,megawatthours,2026-02-16 16:00:00,27944.0
-2026-02-16T16,CAL,California,NG,Net generation,19418,megawatthours,2026-02-16 16:00:00,19418.0
-2026-02-16T16,CAL,California,TI,Total interchange,-6969,megawatthours,2026-02-16 16:00:00,-6969.0
-2026-02-16T15,CAL,California,D,Demand,27100,megawatthours,2026-02-16 15:00:00,27100.0

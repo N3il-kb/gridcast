@@ -4,3 +4,6 @@ old/
 node_modules/
 .vercel
 .env*.local
+__pycache__
+node_modules/
+__pycache__/

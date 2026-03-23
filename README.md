@@ -1,4 +1,4 @@
-# GridCast
+# [GridCast](https://gridcast-v2.vercel.app/)
  
 **AI-powered datacenter suitability platform using real-time energy grid data.**
  

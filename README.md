@@ -17,3 +17,7 @@ An embedded AI assistant (**GridAsk**) lets users ask natural language questions
 ## Demo
  
 The frontend is deployed on Vercel. The data pipeline runs daily on AWS Fargate, updating scores and uploading results to S3.
+
+## Stack
+
+Python, React, Vite, Tailwind CSS, D3.js. Mapbox GL, OpenAI, AWS Fargate, S3, Vercel, EIA API, Open-Meteo

@@ -1,5 +1,5 @@
 # [GridCast](https://gridcast-v2.vercel.app/)
- ---
+
 **AI-powered datacenter suitability platform using real-time energy grid data.**
  
 GridCast scores and maps optimal locations for datacenter deployment across the United States by analyzing renewable energy availability, grid stability, cooling advantages, and operational costs — combining ESG performance with profitability into a single composite metric.
